@@ -1,0 +1,386 @@
+.nodenum {
+    position: absolute;
+    top: 31px;
+    left: 43px;
+    font-size: 24px;
+    color: white;
+}
+
+.full-width {
+    width: 100%;
+}
+
+#story-wrapper {
+    border-radius: 10px;
+    margin-bottom: 5px;
+    border: 5px solid #666;
+}
+
+.selectize-input,
+.selectize-control.single .selectize-input.input-active {
+    background: rgba(32, 32, 32, 0.8);
+}
+
+input {
+    opacity: 1;
+}
+
+.node-rep-block {
+    text-align: center;
+    background: #43494d;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.node-rep-block.disabled {
+    text-align: center;
+    background: rgba(32, 32, 32, 0.2);
+    color: #999;
+}
+
+.node-rep-block.active-rep-block {
+    text-align: center;
+    background: #115d8e;
+    color: #fff;
+}
+
+hr.edithr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.edit-chapter {
+    display: none;
+}
+
+.btn-editor-main {
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.editdecklist {
+    margin-top: 10px;
+}
+
+.editdecklist .list-group-item {
+    cursor: move;
+}
+
+.edit-closer {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.thedecklist.well {
+    padding:5px;
+    margin-top:5px;
+    margin-bottom:5px;
+    height: 230px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.edit-intro {
+    height: 287px;
+    overflow: hidden;
+}
+
+.editdecklist .btn-xs {
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.modal.editor-modal .modal-header {
+    border-bottom: none;
+    position: relative;
+    background: #177bbb;
+    color: white;
+}
+
+.modal.editor-modal .modal-header .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    font-size: 48px;
+    background: #666;
+    color: white;
+    z-index: 9999;
+}
+
+.modal.editor-modal .modal-header .btn:hover {
+    background: #b45b5b;
+}
+
+.modal.editor-modal .modal-header h4 {
+    font-size: 1.8em;
+}
+
+.modal.editor-modal input {
+    display: inline;
+}
+
+.modal .modal-footer {
+    border-top: none;
+    padding: 0;
+}
+
+.modal .modal-footer .btn-group > .btn:first-child {
+    border-bottom-left-radius: 0;
+}
+
+.modal .modal-footer .btn-group > .btn:last-child {
+    border-top-right-radius: 0;
+}
+
+.deck-namer {
+    width: 90%;
+    font-size: 18px;
+    padding: 2px;
+    padding-left: 6px;
+    margin-left: 2px;
+    background: #fff;
+    border:2px solid #ccc;
+    color: #666;
+    box-shadow: 1px 1px 2px 1px #ccc;
+}
+
+.editor-well {
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 55px;
+}
+
+h4.well-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #177bbb;
+    margin: 0;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.dummy-checker {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    background: #177bbb;
+    border-top-left-radius: 10px;
+    width: 30%;
+}
+
+.file-sample, .delete-question-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 10px;
+    padding-top: 10px;
+    background: #177bbb;
+    border-top-right-radius: 10px;
+}
+
+.file-sample a, .delete-question-btn a {
+    color: white;
+}
+
+.modal-xlg {
+    width: 90%;
+}
+
+.game-img img {
+    width: 100%;
+}
+
+.game-closer {
+    display: none;
+}
+
+.modal-game-window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.funkyradio label {
+    /*min-width: 400px;*/
+    
+    width: 100%;
+    border-radius: 3px;
+    font-weight: normal;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.funkyradio input[type="radio"]:empty,
+.funkyradio input[type="checkbox"]:empty {
+    display: none;
+}
+
+.funkyradio input[type="radio"]:empty ~ label,
+.funkyradio input[type="checkbox"]:empty ~ label {
+    position: relative;
+    line-height: 2.5em;
+    text-indent: 1.25em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.funkyradio input[type="radio"]:empty ~ label:before,
+.funkyradio input[type="checkbox"]:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    width: 2.5em;
+    background: #D1D3D4;
+    border-radius: 0;
+}
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label:before,
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label:before {
+    content: '\2714';
+    color: #fff;
+}
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label,
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label {
+    color: #fff;
+}
+
+.funkyradio input[type="radio"]:checked ~ label:before,
+.funkyradio input[type="checkbox"]:checked ~ label:before {
+    content: '\2714';
+    color: #333;
+    background-color: #ccc;
+}
+
+.funkyradio input[type="radio"]:checked ~ label,
+.funkyradio input[type="checkbox"]:checked ~ label {
+    color: gold;
+}
+
+.funkyradio-primary input[type="radio"]:checked ~ label:before,
+.funkyradio-primary input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #337ab7;
+}
+
+.funkyradio.smallfunk label {
+    /*min-width: 400px;*/
+    
+    width: 100%;
+    border-radius: 3px;
+    font-weight: normal;
+    margin: 0;
+    font-size: 1em;
+    background: white;
+    color: #666;
+}
+
+.funkyradio.smallfunk input[type="radio"]:empty ~ label:before,
+.funkyradio.smallfunk input[type="checkbox"]:empty ~ label:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    width: 2em;
+    background: #D1D3D4;
+    border-radius: 0;
+}
+
+.funkyradio.smallfunk input[type="radio"]:empty ~ label,
+.funkyradio.smallfunk input[type="checkbox"]:empty ~ label {
+    position: relative;
+    line-height: 2em;
+    text-indent: 0.7em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.funkyradio.smallfunk input[type="radio"]:hover:not(:checked) ~ label:before,
+.funkyradio.smallfunk input[type="checkbox"]:hover:not(:checked) ~ label:before {
+    content: '\2714';
+    color: #ccc;
+}
+
+.funkyradio.smallfunk input[type="radio"]:hover:not(:checked) ~ label,
+.funkyradio.smallfunk input[type="checkbox"]:hover:not(:checked) ~ label {
+    color: #666;
+}
+
+.funkyradio.smallfunk input[type="radio"]:checked ~ label:before,
+.funkyradio.smallfunk input[type="checkbox"]:checked ~ label:before {
+    content: '\2714';
+    color: #fff;
+    background-color: #337ab7;
+}
+
+.funkyradio input[type="radio"]:focus ~ label:before,
+.funkyradio input[type="checkbox"]:focus ~ label:before {
+}
+
+
+.funkyradio.smallfunk input[type="radio"]:checked ~ label,
+.funkyradio.smallfunk input[type="checkbox"]:checked ~ label {
+    color: black;
+}
+
+.funkyradio-primary.smallfunk input[type="radio"]:checked ~ label:before,
+.funkyradio-primary.smallfunk input[type="checkbox"]:checked ~ label:before {
+    color: #fff;
+    background-color: #337ab7;
+}
+
+.vid {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.vid iframe,
+.vid object,
+.vid embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.game-modal-control.carousel-control {
+    color: #666;
+}
+
+.game-modal-control.carousel-control.left {
+    background-image: none;
+}
+
+.game-modal-control.carousel-control.right {
+    background-image: none;
+}

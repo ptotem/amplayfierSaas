@@ -1,0 +1,272 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.info-tag,
+.nav-tabs li,
+.multi-menu .has-children > a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+    background: #666;
+}
+
+.logo-brand-inner {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-weight: bold;
+}
+
+.logo-brand-inner img {
+    vertical-align: middle;
+    margin-top: -10px;
+}
+
+.big-text-banner.big-text-main-headline {
+    margin-top: 10px;
+    color: #ffb567;
+}
+
+#main-page-signup.social-user li {
+    width: 30%;
+    display: inline-block;
+}
+
+#btn-learnmore {
+    margin-top: -55px;
+}
+
+#btn-learnmore i {
+    font-size: 72px;
+    cursor: pointer;
+    background: white;
+    color: #ffb567;
+}
+
+#btn-learnmore i:hover {
+    margin-top: 5px;
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 52.75%;
+    /* 16:9 */
+    
+    padding-top: 25px;
+    height: 0;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+.column-featured {
+    padding: 30px;
+    background: white;
+    color: #666;
+}
+
+.column-featured-headline {
+    line-height: 1.1;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.column-featured ul {
+    font-size: 1.3em;
+    list-style: square;
+    line-height: 1.4;
+    padding-top: 5px;
+}
+
+.column-featured p {
+    font-size: 1.3em;
+    line-height: 1.1;
+}
+
+.btn-featured,
+.btn-call-to-action {
+    font-size: 1.5em;
+    background: #ffb567;
+    color: white;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-featured:hover,
+.btn-call-to-action:hover {
+    background: #fff;
+    color: #666;
+}
+
+.call-to-action#freecta {
+    background: #666;
+    color: white;
+}
+
+.call-to-action-text {
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+}
+
+.box-icon-small {
+    border-radius: 50%;
+    display: inline-table;
+    height: 120px;
+    margin: 10px;
+    width: 120px;
+    background: #666;
+    cursor: pointer;
+}
+
+.box-icon-small span {
+    color: #fff;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.box-icon-small:hover {
+    background: #e89a3b;
+}
+
+.info h4 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.info > p {
+    color: #717171;
+    font-size: 1.8em;
+    padding-top: 6px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 1.2;
+}
+
+#goPop {
+    font-size: 2em;
+    background: #666;
+    padding: 10px;
+    opacity: 0;
+    color: white;
+}
+
+.pr-4 [class*="price-column-1"] {
+    left: 0;
+}
+
+.pr-4 [class*="price-column-2"] {
+    left: 0;
+}
+
+.pr-4 [class*="price-column-3"] {
+    left: 0;
+}
+
+.pr-4 [class*="price-column-4"] {
+    left: 0;
+}
+
+.price-column-1 .inner-price {
+    background: rgba(161, 234, 161, 0.51);
+    color: black;
+}
+
+.price-column-2 .inner-price {
+    background: rgba(116, 85, 27, 0.6);
+    color: black;
+}
+
+.price-column-3 .inner-price {
+    background: rgba(255, 140, 0, 0.45);
+    color: black;
+}
+
+.price-column-4 .inner-price {
+    background: rgba(255, 0, 0, 0.38);
+    color: black;
+}
+
+.price-ribbon-container {
+    width: 150px;
+}
+
+.price-ribbon {
+    font-size: 24px;
+    top: 30px;
+    z-index: 99999999;
+}
+
+.the-price {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+}
+
+.best-seller .price-ribbon,
+.best-seller .the-price {
+    background: green;
+}
+
+.price-title {
+    background: #333;
+    margin-bottom: 20px;
+    color: white;
+}
+
+@media screen and (max-width: 1280px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 9px;
+    }
+    .logo-brand-inner {
+        font-weight: normal;
+    }
+    .column-featured-headline {
+        padding-bottom: 0;
+        margin-bottom: 12px;
+    }
+    .column-featured ul {
+        padding-top: 0;
+        margin-bottom: 12px;
+    }
+    .column-featured p {
+        font-size: 1.5em;
+        line-height: 1.1;
+    }
+    .btn-featured {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}

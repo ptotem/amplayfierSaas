@@ -1,0 +1,212 @@
+<style>
+  #portal-manager {
+    font-size: 1.5em;
+  }
+  
+  .list-group-item {
+    border: none;
+    border-bottom: 5px solid #ccc;
+  }
+  
+  .list-group-item.player {
+    border-left: 20px solid #f7964f;
+  }
+  
+  .list-group-item.admin {
+    border-left: 20px solid #db6363;
+  }
+  
+  .btn-hot {
+    color: #fff;
+    background-color: #db5566;
+    border-bottom: 2px solid #af4451;
+  }
+  
+  .btn-hot:hover,
+  .btn-sky.active:focus,
+  .btn-hot:focus,
+  .open>.dropdown-toggle.btn-hot {
+    color: #fff;
+    background-color: #df6a78;
+    border-bottom: 2px solid #b25560;
+    outline: none;
+  }
+  
+  .btn-hot:active,
+  .btn-hot.active {
+    color: #fff;
+    background-color: #c04b59;
+    border-top: 2px solid #9a3c47;
+    margin-top: 2px;
+  }
+  
+  .btn-sunny {
+    color: #fff;
+    background-color: #f4ad49;
+    border-bottom: 2px solid #c38a3a;
+  }
+  
+  .btn-sunny:hover,
+  .btn-sky.active:focus,
+  .btn-sunny:focus,
+  .open>.dropdown-toggle.btn-sunny {
+    color: #fff;
+    background-color: #f5b75f;
+    border-bottom: 2px solid #c4924c;
+    outline: none;
+  }
+  
+  .btn-sunny:active,
+  .btn-sunny.active {
+    color: #fff;
+    background-color: #d69840;
+    border-top: 2px solid #ab7a33;
+    margin-top: 2px;
+  }
+  
+  .btn-sky {
+    color: #fff;
+    background-color: #0bacd3;
+    border-bottom: 2px solid #098aa9;
+  }
+  
+  .btn-sky:hover,
+  .btn-sky.active:focus,
+  .btn-sky:focus,
+  .open>.dropdown-toggle.btn-sky {
+    color: #fff;
+    background-color: #29b6d8;
+    border-bottom: 2px solid #2192ad;
+    outline: none;
+  }
+  
+  .btn-sky:active,
+  .btn-sky.active {
+    color: #fff;
+    background-color: #0a97b9;
+    border-top: 2px solid #087994;
+    outline-offset: none;
+    margin-top: 2px;
+  }
+  
+  .btn:focus,
+  .btn:active:focus,
+  .btn.active:focus {
+    outline: none;
+    outline-offset: 0px;
+  }
+  
+  .btn-create {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 20px;
+  }
+  
+  .modal-content {
+    background: #115d8e;
+  }
+  
+  .modal .modal-header {
+    border-bottom: none;
+    position: relative;
+    background: #08507e;
+    color: white;
+  }
+  
+  .modal .modal-header .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    font-size: 48px;
+    padding: 20px;
+    background: #333;
+    color: white;
+    opacity: 1;
+  }
+  
+  .modal .modal-header .btn:hover {
+    background: #b45b5b;
+  }
+  
+  .modal input {
+    display: inline;
+  }
+  
+  .modal .modal-footer {
+    border-top: none;
+    padding: 0;
+  }
+  
+  .modal .modal-footer .btn {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .modal .modal-footer .btn-group > .btn:first-child {
+    border-bottom-left-radius: 0;
+    margin: 0;
+  }
+  
+  .modal .modal-footer .btn-group > .btn:last-child {
+    border-top-right-radius: 0;
+    margin: 0;
+  }
+</style>
+
+
+<div class="animated fadeIn padded bg-dark-lter">
+  <button type="button" class="close pull-right turbo-toggle">&times;</button>
+
+  <div class="row padded-top padded-bottom">
+    <!--
+    <div class="col-sm-4 padded-top">
+    <img src="http://thumbs.dreamstime.com/t/multicolored-pencils-isolated-white-background-back-to-school-42337577.jpg" class="img-responsive" style="width:100%;">
+  </div>
+-->
+    <div class="col-sm-12">
+      <div class="container-fluid">
+        <div class="col-md-12">
+
+          <div id="portal-manager">
+            <h1>My Portals</h1>
+            <div class="well" style="background:#ccc;color:black;">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="input-group">
+                    <input type="text" name="SearchDualList" class="form-control" placeholder="Search for a portal" style="background:white;" />
+                    <span class="input-group-addon glyphicon glyphicon-search btn-warning"></span>
+                  </div>
+                </div>
+              </div>
+              <ul class="list-group" style="margin-top:25px">
+                <li class="list-group-item admin">
+                  Cras justo odio
+                  <div class="btn-bank pull-right">
+                    <button type="button" class="btn btn-sky text-uppercase btn-sm">Play</button>
+                    <button type="button" class="btn btn-sunny text-uppercase btn-sm">Edit</button>
+                    <button type="button" class="btn btn-hot text-uppercase btn-sm">Delete</button>
+                  </div>
+                </li>
+                <li class="list-group-item player">
+                  Lorem Ipsum Delevor
+                  <div class="btn-bank pull-right">
+                    <button type="button" class="btn btn-sky text-uppercase btn-sm">Play</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+  $(document).trigger('page:load');
+</script>

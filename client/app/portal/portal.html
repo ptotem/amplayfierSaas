@@ -1,0 +1,1063 @@
+<div class="high emerald-default htmls htmls_widgets">
+  <!-- Apple Touch -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/images/apple-touch-icon-57-precomposed.png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+
+  <script type="text/javascript">
+    var polyfilter_scriptpath = "assets/themes/emerald/polyfills/filters/";
+    window.polyfilter_skip_stylesheets = true
+  </script>
+
+  <link href="assets/css/application.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="assets/css/story-page.css" />
+  <link rel="stylesheet" href="assets/css//editor.css" />
+
+  <script src="assets/js/application.js" type="text/javascript"></script>
+  <script src="assets/js/demo.js" type="text/javascript"></script>
+  <script src="assets/js/init.js" type="text/javascript"></script>
+
+  <div id="node-dialog-container"></div>
+
+
+  <div class="oc-xs-push-push oc-sm-squeeze-push oc-md-squeeze-push oc-lg-squeeze-push modal-blur-content">
+
+    <div id="oc-wrapper" class="oc-wrapper">
+
+      <div class="oc-push oc-scroll">
+
+
+        <div id="main-oc-container" class="oc-container">
+          <nav class="navbar navbar-default navbar-static-top navbar-inplace" role="navigation">
+            <ul class="nav navbar-nav navbar-left pull-left hidden-sm hidden-md hidden-lg">
+              <li>
+                <a id="oc-left-toggle-xs" href="#oc-wrapper" class="btn-nav pull-left " data-toggle="offcanvas" data-control="left" data-states="open,hidden" data-persist="lg,md,sm" data-parent="body" data-sibling="right">
+                  <i class="icm icm-menu6"></i>
+                </a>
+              </li>
+            </ul>
+            <a class="navbar-brand" href="htmls/dashboard.html">
+              <img src="assets/images/amplayfier-logo.png" /> am
+              <span class="text-warning-dk">play</span>fier</a>
+            <ul class="nav navbar-nav navbar-right pull-right hidden-xs" style="margin-right:5px;">
+              <li class="dropdown" dropdown>
+                <a href="#" dropdown-toggle class="navbar-img-link dropdown-toggle">
+                  <img class="img-circle" src="assets/images/faker/avatars/48/Faces_Users-13.png" />
+                  <span class="hidden-xs hidden-sm hidden-md">{{currentUser.name}}</span>
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu animated fadeIn fast">
+                  <li>
+                    <a href="pages/profile.html"> <i class="fa fa-user"></i> Profile
+                    </a>
+                  </li>
+                  <li>
+                    <a href="pages/profile.html"> <i class="fa fa-cog"></i> Settings
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <a href="#" ng-click="logout()"> <i class="fa fa-power-off text-danger"></i>
+                        <span class="text-danger">Sign out</span>
+                      </a>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+          </nav>
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-8">
+                <h3 class="em-page-header v-mid-row thin">
+                  <i class="icm icm-grid text-gradient-info-dk"></i>
+                  <span class="text-gradient-black-dk">http://www.amplayfier.com/arijitlahiri/portalabc </span>
+                  <div class="btn btn-primary pull-right">Preview</div>
+                </h3>
+              </div>
+              <div class="col-sm-4 text-right-sm text-right-md text-right-lg">
+                <ul class="breadcrumb breadcrumb-top">
+                  <li><i class="fa fa-home"></i> <a href="/">Home</a>
+                  </li>
+                  <li><i class="fa fa-list-alt"></i> <a href="/">Portals</a>
+                  </li>
+                  <li class="active">
+                    Portalabc
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-8">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <select class="form-control" rel="selectize">
+                      <option value="">Change Storyboard</option>
+                      <option value="0">ea</option>
+                      <option value="1">laudantium</option>
+                      <option value="2">quae</option>
+                      <option value="3">sed</option>
+                      <option value="4">qui</option>
+                      <option value="5">qui</option>
+                      <option value="6">commodi</option>
+                      <option value="7">nulla</option>
+                      <option value="8">voluptate</option>
+                      <option value="9">praesentium</option>
+                    </select>
+                  </div>
+                </div>
+                <div id="story-wrapper" class="col-sm-12">
+                  <div id="story-nodes">
+                    <a href="#" class="story-node" ng-repeat="node in storyConfig.nodes" id="story-node-{{$index}}" data-drag="true" jqyoui-draggable ng-model="story-node-$index" style="top:{{node.py}}%;left:{{node.px}}%;width:100px;">
+                      <img src="{{storyConfig.imgsrc}}/blank-node.png" class="editor-blanks" />
+                      <div class="nodenum">{{$index + 1}}</div>
+                    </a>
+                  </div>
+                  <img id="story-presenter" src="#" alt="" />
+                  <img id="story-nameplate" src="#" alt="" />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <h3 class="no-margin-top">Customize Design</h3>
+                <div class="row">
+                  <div class="col-sm-3">
+                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                      <span class="btn btn-dark-lter btn-file full-width">
+                        <span class="fileinput-new">Background</span>
+                        <span class="fileinput-exists">Background</span>
+                        <input type="file" name="...">
+                      </span>
+                      <span class="fileinput-filename"></span>
+                      <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                      <span class="btn btn-dark-lter btn-file full-width">
+                        <span class="fileinput-new">Presenter</span>
+                        <span class="fileinput-exists">Presenter</span>
+                        <input type="file" name="...">
+                      </span>
+                      <span class="fileinput-filename"></span>
+                      <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                      <span class="btn btn-dark-lter btn-file full-width">
+                        <span class="fileinput-new">Nameplate</span>
+                        <span class="fileinput-exists">Nameplate</span>
+                        <input type="file" name="...">
+                      </span>
+                      <span class="fileinput-filename"></span>
+                      <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="fileinput fileinput-new" data-provides="fileinput">
+                      <span class="btn btn-dark-lter btn-file full-width">
+                        <span class="fileinput-new">Icons</span>
+                        <span class="fileinput-exists"> Icons</span>
+                        <input type="file" name="...">
+                      </span>
+                      <span class="fileinput-filename"></span>
+                      <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+                    </div>
+                  </div>
+
+                </div>
+                <h3 class="no-margin-top">Customize Chapters</h3>
+                <div class="row">
+                  <div class="col-sm-2">
+                    <div class="node-rep-block">1</div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="node-rep-block">2</div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="node-rep-block">3</div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="node-rep-block">4</div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="node-rep-block">5</div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="node-rep-block disabled">6</div>
+                  </div>
+                </div>
+                <hr class="edithr">
+                <div class="well edit-intro">
+                  <h2>Select a chapter to customize content</h2>
+                </div>
+                <div class="edit-chapters">
+                  <div class="edit-chapter" id="edit-chapter-1">
+                    <h3 class="no-margin-top">
+                      Add Content to Chapter 1
+                      <div class="pull-right edit-closer">&times;</div>
+                    </h3>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="btn btn-dark-lter" data-toggle="modal" href="#uploadPPT">
+                          POWERPOINT
+                        </div>
+
+                        <div class="btn btn-dark-lter" data-toggle="modal" href="#">
+                          IMAGE
+                        </div>
+
+                        <div class="btn btn-dark-lter" data-toggle="modal" href="#uploadVideo">
+                          VIDEO
+                        </div>
+
+                        <div class="btn btn-dark-lter" data-toggle="modal" href="#uploadGame">
+                          GAME
+                        </div>
+
+                        <div class="btn btn-dark-lter">
+                          WEBPAGE
+                        </div>
+                      </div>
+
+
+                    </div>
+                    <div class="thedecklist well">
+                      <ul class="list-group editdecklist">
+                        <li class="list-group-item">
+                          <i class="fa fa-file-powerpoint-o"></i>&nbsp; Deck #1 Powerpoint
+
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-arrows"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li>&nbsp;&nbsp;&nbsp;
+                                <strong>Move To</strong>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Chapter 2</a>
+                              </li>
+                              <li><a href="#">Chapter 3</a>
+                              </li>
+                              <li><a href="#">Chapter 4</a>
+                              </li>
+                              <li><a href="#">Chapter 5</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <a class="btn btn-danger-lter btn-xs pull-right" title="Delete"> <i class="fa fa-minus-square"></i> </a>
+                          <a class="btn btn-primary-lter btn-xs pull-right" data-toggle="modal" href="#uploadPPT" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-dark-lter btn-xs pull-right" data-toggle="modal" href="#viewPPTModal" data-itemid="1" title="View"><i class="fa fa-eye"></i></a>
+
+
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-file-powerpoint-o"></i>&nbsp; Deck #1 Powerpoint
+
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-arrows"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li>&nbsp;&nbsp;&nbsp;
+                                <strong>Move To</strong>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Chapter 2</a>
+                              </li>
+                              <li><a href="#">Chapter 3</a>
+                              </li>
+                              <li><a href="#">Chapter 4</a>
+                              </li>
+                              <li><a href="#">Chapter 5</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <a class="btn btn-danger-lter btn-xs pull-right" title="Delete"> <i class="fa fa-minus-square"></i> </a>
+                          <a class="btn btn-primary-lter btn-xs pull-right" data-toggle="modal" href="#uploadPPT" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-dark-lter btn-xs pull-right" data-toggle="modal" href="#viewPPTModal" data-itemid="1" title="View"><i class="fa fa-eye"></i></a>
+
+
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-file-powerpoint-o"></i>&nbsp; Deck #1 Powerpoint
+
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-arrows"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li>&nbsp;&nbsp;&nbsp;
+                                <strong>Move To</strong>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Chapter 2</a>
+                              </li>
+                              <li><a href="#">Chapter 3</a>
+                              </li>
+                              <li><a href="#">Chapter 4</a>
+                              </li>
+                              <li><a href="#">Chapter 5</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <a class="btn btn-danger-lter btn-xs pull-right" title="Delete"> <i class="fa fa-minus-square"></i> </a>
+                          <a class="btn btn-primary-lter btn-xs pull-right" data-toggle="modal" href="#uploadPPT" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-dark-lter btn-xs pull-right" data-toggle="modal" href="#viewPPTModal" data-itemid="1" title="View"><i class="fa fa-eye"></i></a>
+
+
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-file-powerpoint-o"></i>&nbsp; Deck #1 Powerpoint
+
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-arrows"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li>&nbsp;&nbsp;&nbsp;
+                                <strong>Move To</strong>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Chapter 2</a>
+                              </li>
+                              <li><a href="#">Chapter 3</a>
+                              </li>
+                              <li><a href="#">Chapter 4</a>
+                              </li>
+                              <li><a href="#">Chapter 5</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <a class="btn btn-danger-lter btn-xs pull-right" title="Delete"> <i class="fa fa-minus-square"></i> </a>
+                          <a class="btn btn-primary-lter btn-xs pull-right" data-toggle="modal" href="#uploadPPT" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-dark-lter btn-xs pull-right" data-toggle="modal" href="#viewPPTModal" data-itemid="1" title="View"><i class="fa fa-eye"></i></a>
+
+
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-file-powerpoint-o"></i>&nbsp; Deck #1 Powerpoint
+
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-arrows"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li>&nbsp;&nbsp;&nbsp;
+                                <strong>Move To</strong>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Chapter 2</a>
+                              </li>
+                              <li><a href="#">Chapter 3</a>
+                              </li>
+                              <li><a href="#">Chapter 4</a>
+                              </li>
+                              <li><a href="#">Chapter 5</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <a class="btn btn-danger-lter btn-xs pull-right" title="Delete"> <i class="fa fa-minus-square"></i> </a>
+                          <a class="btn btn-primary-lter btn-xs pull-right" data-toggle="modal" href="#uploadPPT" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-dark-lter btn-xs pull-right" data-toggle="modal" href="#viewPPTModal" data-itemid="1" title="View"><i class="fa fa-eye"></i></a>
+
+
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-youtube-play"></i>&nbsp; Deck #2 Video
+
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-arrows"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li>&nbsp;&nbsp;&nbsp;
+                                <strong>Move To</strong>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Chapter 2</a>
+                              </li>
+                              <li><a href="#">Chapter 3</a>
+                              </li>
+                              <li><a href="#">Chapter 4</a>
+                              </li>
+                              <li><a href="#">Chapter 5</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <a class="btn btn-danger-lter btn-xs pull-right" title="Delete"> <i class="fa fa-minus-square"></i> </a>
+                          <a class="btn btn-primary-lter btn-xs pull-right" data-toggle="modal" href="#uploadVideo" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-dark-lter btn-xs pull-right" data-toggle="modal" href="#viewVideoModal" data-itemid="1" title="View"><i class="fa fa-eye"></i></a>
+
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-gamepad"></i>&nbsp; Deck #3 Game
+
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-arrows"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li>&nbsp;&nbsp;&nbsp;
+                                <strong>Move To</strong>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Chapter 2</a>
+                              </li>
+                              <li><a href="#">Chapter 3</a>
+                              </li>
+                              <li><a href="#">Chapter 4</a>
+                              </li>
+                              <li><a href="#">Chapter 5</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <a class="btn btn-danger-lter btn-xs pull-right" title="Delete"> <i class="fa fa-minus-square"></i> </a>
+                          <a class="btn btn-primary-lter btn-xs pull-right" data-toggle="modal" href="#uploadGame" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-dark-lter btn-xs pull-right" data-toggle="modal" href="#viewGameModal" data-itemid="1" title="View"><i class="fa fa-eye"></i></a>
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                              Setup
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+
+                              <li>
+                                <a data-toggle="modal" href="#questionBankModal">Upload Questions</a>
+                              </li>
+                              <li>
+                                <a data-toggle="modal" href="#addAQuestionModal">Add a Question</a>
+                              </li>
+                              <li><a data-toggle="modal" href="#editQuestionModal">Edit a Question</a>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a data-toggle="modal" href="#setParametersModal">Set Parameters</a>
+                              </li>
+                              <li><a href="#">Customize Design</a>
+                              </li>
+                            </ul>
+                          </div>
+
+
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+
+                <a class="btn btn-primary btn-lg full-width">Save and Continue</a>
+
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  <!-- Needed by BSE.Mq.screen() helper in utils.js -->
+  <div id="mq"></div>
+
+  <!-- Needed by EmVars helper in _emerald.js -->
+  <div id="emvars"></div>
+
+  <!-- Modals -->
+
+  <div id="viewPPTModal" class="modal fade in editor-modal" tabindex="-1" role="dialog" aria-labelledby="viewPPTModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a class="btn btn-default" data-dismiss="modal">&times;</a>
+          <h4 class="modal-title" id="viewPPTModalLabel">View Powerpoint</h4>
+        </div>
+        <div class="modal-body">
+        </div>
+
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dalog -->
+  </div>
+  <!-- /.modal -->
+
+  <div id="viewVideoModal" class="modal fade in editor-modal" tabindex="-1" role="dialog" aria-labelledby="viewVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a class="btn btn-default" data-dismiss="modal">&times;</a>
+          <h4 class="modal-title" id="viewVideoModalLabel">View Video</h4>
+        </div>
+        <div class="modal-body">
+          <div class="vid">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hpazy0BHzxY" allowfullscreen=""></iframe>
+          </div>
+          <!--./vid -->
+        </div>
+
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dalog -->
+  </div>
+  <!-- /.modal -->
+
+  <div id="viewGameModal" class="modal fade in editor-modal" tabindex="-1" role="dialog" aria-labelledby="viewGameModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a class="btn btn-default" data-dismiss="modal">&times;</a>
+          <h4 class="modal-title" id="viewVideoModalLabel">View Game</h4>
+        </div>
+        <div class="modal-body">
+          <iframe width="100%" height="500px" src="../games/ThisOrThat/index.html" frameborder=0></iframe>
+        </div>
+
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dalog -->
+  </div>
+  <!-- /.modal -->
+
+  <div id="uploadPPT" class="modal fade in editor-modal" tabindex="-1" role="dialog" aria-labelledby="uploadPPTLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <a class="btn btn-default" data-dismiss="modal">&times;</a>
+          <h4 class="modal-title" id="uploadPPTLabel">Add a Powerpoint Presentation</h4>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="deck-namer" placeholder="Enter a name for the deck">
+          <br>
+          <br>
+
+          <div class="well btn-primary-lter editor-well">
+
+            <h4 class="well-header">Upload PowerPoint File</h4>
+
+            <div class="dummy-checker">
+              <div class="funkyradio">
+                <div class="funkyradio-primary">
+                  <input type="checkbox" name="defaultvideo" id="defaultvideo" />
+                  <label for="defaultvideo">Use a dummy</label>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <div class="fileinput fileinput-new" data-provides="fileinput">
+              <div class="input-group">
+                <div class="form-control" data-trigger="fileinput">
+                  <i class="fa fa-file fileinput-exists"></i>
+                  <span class="fileinput-filename"></span>
+                </div>
+                <span class="input-group-addon btn btn-file">
+                  <span class="fileinput-new">Select File</span>
+                  <span class="fileinput-exists">Change</span>
+                  <input type="file" name="...">
+                </span>
+                <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <div class="btn-group">
+            <button class="btn btn-lg btn-primary">Save changes</button>
+          </div>
+
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dalog -->
+    </div>
+  </div>
+
+  <div id="uploadVideo" class="modal fade in editor-modal" tabindex="-1" role="dialog" aria-labelledby="uploadVideoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <a class="btn btn-default" data-dismiss="modal">&times;</a>
+          <h4 class="modal-title" id="uploadVideoLabel">Add a YouTube Video</h4>
+        </div>
+        <div class="modal-body">
+
+          <input type="text" class="deck-namer" placeholder="Enter a name for the deck">
+          <br>
+          <br>
+
+          <div class="well btn-primary-lter editor-well">
+
+            <h4 class="well-header">Insert YouTube Link</h4>
+
+            <div class="dummy-checker">
+              <div class="funkyradio">
+                <div class="funkyradio-primary">
+                  <input type="checkbox" name="defaultvideo" id="defaultvideo" />
+                  <label for="defaultvideo">Use a dummy</label>
+                </div>
+              </div>
+            </div>
+
+            <h3>https://youtu.be/
+              <input type="text" style="width:58%;color:#666;padding-left:0.25em;">
+            </h3>
+
+
+          </div>
+
+
+        </div>
+
+
+        <div class="modal-footer">
+          <div class="btn-group">
+            <button class="btn btn-lg btn-primary">Save changes</button>
+          </div>
+
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dalog -->
+    </div>
+  </div>
+  <!-- /.modal -->
+
+  <div id="uploadGame" class="modal fade in editor-modal" tabindex="-1" role="dialog" aria-labelledby="uploadGameLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xlg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <a class="btn btn-default" data-dismiss="modal">&times;</a>
+          <h4 class="modal-title" id="uploadGameLabel">Add a Game</h4>
+        </div>
+        <div class="modal-body">
+        </div>
+
+
+        <div class="modal-footer">
+          <div class="btn-group">
+            <button class="btn btn-lg btn-primary">Save changes</button>
+          </div>
+
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dalog -->
+    </div>
+  </div>
+  <!-- /.modal -->
+
+  <div id="questionBankModal" class="modal fade in editor-modal" tabindex="-1" role="dialog" aria-labelledby="questionBankLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <a class="btn btn-default" data-dismiss="modal">&times;</a>
+          <h4 class="modal-title" id="questionBankLabel">Upload Question Bank</h4>
+        </div>
+        <div class="modal-body">
+          <br>
+          <div class="well btn-primary-lter editor-well">
+
+            <h4 class="well-header">Upload Question Bank</h4>
+
+            <div class="dummy-checker">
+              <div class="funkyradio">
+                <div class="funkyradio-primary">
+                  <input type="checkbox" name="defaultqbank" id="defaultqbank" />
+                  <label for="defaultqbank">Use a dummy</label>
+                </div>
+              </div>
+            </div>
+            <h4 class="file-sample">
+              <a href="#">Download Sample File</a>
+            </h4>
+
+            <br>
+            <div class="fileinput fileinput-new" data-provides="fileinput">
+              <div class="input-group">
+                <div class="form-control" data-trigger="fileinput">
+                  <i class="fa fa-file fileinput-exists"></i>
+                  <span class="fileinput-filename"></span>
+                </div>
+                <span class="input-group-addon btn btn-file">
+                  <span class="fileinput-new">Select File</span>
+                  <span class="fileinput-exists">Change</span>
+                  <input type="file" name="...">
+                </span>
+                <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="btn-group">
+            <button class="btn btn-lg btn-primary">Save changes</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dalog -->
+    </div>
+  </div>
+
+  <div id="addAQuestionModal" class="modal fade in editor-modal" tabindex="-1" role="dialog" aria-labelledby="addAQuestionLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <a class="btn btn-default" data-dismiss="modal">&times;</a>
+          <h4 class="modal-title" id="addAQuestionLabel">Add a Question</h4>
+        </div>
+        <div class="modal-body">
+          <br>
+          <div class="well btn-primary-lter editor-well">
+
+            <h4 class="well-header">Create New Question</h4>
+
+            <div class="dummy-checker">
+              <div class="funkyradio">
+                <div class="funkyradio-primary">
+                  <input type="checkbox" name="defaultaddq" id="defaultaddq" />
+                  <label for="defaultaddq">Use a dummy</label>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <textarea name="newQuestion" id="newQuestion" cols="72" rows="3" placeholder="Enter Question Text"></textarea>
+            <h4>Answer Options</h4>
+            <div class="row" style="margin-bottom:2px">
+              <div class="col-sm-1">
+                <strong>A.</strong>
+              </div>
+              <div class="col-sm-8">
+                <input type="text" style="width:100%;" placeholder="Put in an answer option">
+              </div>
+              <div class="col-sm-3">
+                <div class="funkyradio smallfunk">
+                  <div class="funkyradio-primary">
+                    <input type="checkbox" name="correcta" id="correcta" />
+                    <label for="correcta">Correct</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom:2px">
+              <div class="col-sm-1">
+                <strong>B.</strong>
+              </div>
+              <div class="col-sm-8">
+                <input type="text" style="width:100%;" placeholder="Put in an answer option">
+              </div>
+              <div class="col-sm-3">
+                <div class="funkyradio smallfunk">
+                  <div class="funkyradio-primary">
+                    <input type="checkbox" name="correctb" id="correctb" />
+                    <label for="correctb">Correct</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom:2px">
+              <div class="col-sm-1">
+                <strong>C.</strong>
+              </div>
+              <div class="col-sm-8">
+                <input type="text" style="width:100%;" placeholder="Put in an answer option">
+              </div>
+              <div class="col-sm-3">
+                <div class="funkyradio smallfunk">
+                  <div class="funkyradio-primary">
+                    <input type="checkbox" name="correctc" id="correctc" />
+                    <label for="correctc">Correct</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom:2px">
+              <div class="col-sm-1">
+                <strong>D.</strong>
+              </div>
+              <div class="col-sm-8">
+                <input type="text" style="width:100%;" placeholder="Put in an answer option">
+              </div>
+              <div class="col-sm-3">
+                <div class="funkyradio smallfunk">
+                  <div class="funkyradio-primary">
+                    <input type="checkbox" name="correctd" id="correctd" />
+                    <label for="correctd">Correct</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="btn-group">
+            <button class="btn btn-lg btn-primary">Save changes</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dalog -->
+    </div>
+  </div>
+
+  <div id="editQuestionModal" class="modal fade in editor-modal" tabindex="-1" role="dialog" aria-labelledby="editQuestionLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <a class="btn btn-default" data-dismiss="modal">&times;</a>
+          <h4 class="modal-title" id="editQuestionLabel">Edit a Question</h4>
+        </div>
+        <div class="modal-body">
+          <br>
+          <select class="form-control" rel="selectize">
+            <option value="">Select a Question</option>
+            <option value="0">ea</option>
+            <option value="1">laudantium</option>
+            <option value="2">quae</option>
+            <option value="3">sed</option>
+            <option value="4">qui</option>
+            <option value="5">qui</option>
+            <option value="6">commodi</option>
+            <option value="7">nulla</option>
+            <option value="8">voluptate</option>
+            <option value="9">praesentium</option>
+          </select>
+          <br>
+          <div class="well btn-primary-lter editor-well">
+
+            <h4 class="well-header">Edit Question</h4>
+
+            <h4 class="delete-question-btn">
+              <a href="#">Delete</a>
+            </h4>
+
+            <br>
+            <textarea name="newQuestion" id="newQuestion" cols="72" rows="3" placeholder="Enter Question Text"></textarea>
+            <h4>Answer Options</h4>
+            <div class="row" style="margin-bottom:2px">
+              <div class="col-sm-1">
+                <strong>A.</strong>
+              </div>
+              <div class="col-sm-8">
+                <input type="text" style="width:100%;" placeholder="Put in an answer option">
+              </div>
+              <div class="col-sm-3">
+                <div class="funkyradio smallfunk">
+                  <div class="funkyradio-primary">
+                    <input type="checkbox" name="editcorrecta" id="editcorrecta" />
+                    <label for="editcorrecta">Correct</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom:2px">
+              <div class="col-sm-1">
+                <strong>B.</strong>
+              </div>
+              <div class="col-sm-8">
+                <input type="text" style="width:100%;" placeholder="Put in an answer option">
+              </div>
+              <div class="col-sm-3">
+                <div class="funkyradio smallfunk">
+                  <div class="funkyradio-primary">
+                    <input type="checkbox" name="editcorrectb" id="editcorrectb" />
+                    <label for="editcorrectb">Correct</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom:2px">
+              <div class="col-sm-1">
+                <strong>C.</strong>
+              </div>
+              <div class="col-sm-8">
+                <input type="text" style="width:100%;" placeholder="Put in an answer option">
+              </div>
+              <div class="col-sm-3">
+                <div class="funkyradio smallfunk">
+                  <div class="funkyradio-primary">
+                    <input type="checkbox" name="editcorrectc" id="editcorrectc" />
+                    <label for="editcorrectc">Correct</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" style="margin-bottom:2px">
+              <div class="col-sm-1">
+                <strong>D.</strong>
+              </div>
+              <div class="col-sm-8">
+                <input type="text" style="width:100%;" placeholder="Put in an answer option">
+              </div>
+              <div class="col-sm-3">
+                <div class="funkyradio smallfunk">
+                  <div class="funkyradio-primary">
+                    <input type="checkbox" name="editcorrectd" id="editcorrectd" />
+                    <label for="editcorrectd">Correct</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="btn-group">
+            <button class="btn btn-lg btn-primary">Save changes</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dalog -->
+    </div>
+  </div>
+
+  <div id="setParametersModal" class="modal fade in editor-modal" tabindex="-1" role="dialog" aria-labelledby="setParametersLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <a class="btn btn-default" data-dismiss="modal">&times;</a>
+          <h4 class="modal-title" id="setParametersLabel">Set Parameters</h4>
+        </div>
+        <div class="modal-body">
+          <br>
+          <div class="well btn-primary-lter editor-well">
+
+            <h4 class="well-header">Parameters</h4>
+
+            <div class="dummy-checker" style="width:60%;">
+              <div class="funkyradio">
+                <div class="funkyradio-primary">
+                  <input type="checkbox" name="defaultparams" id="defaultparams" />
+                  <label for="defaultparams">Use defaults</label>
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <div class="row" style="margin-bottom:2px">
+              <div class="col-sm-8">
+                Parameter 1
+              </div>
+              <div class="col-sm-4">
+                <input type="text" style="width:100%;">
+              </div>
+
+            </div>
+            <div class="row" style="margin-bottom:2px">
+              <div class="col-sm-8">
+                Parameter 2
+              </div>
+              <div class="col-sm-4">
+                <input type="text" style="width:100%;">
+              </div>
+
+            </div>
+            <div class="row" style="margin-bottom:2px">
+              <div class="col-sm-8">
+                Parameter 3
+              </div>
+              <div class="col-sm-4">
+                <input type="text" style="width:100%;">
+              </div>
+
+            </div>
+            <div class="row" style="margin-bottom:2px">
+              <div class="col-sm-8">
+                Parameter 4
+              </div>
+              <div class="col-sm-4">
+                <input type="text" style="width:100%;">
+              </div>
+
+            </div>
+            <br>
+
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="btn-group">
+            <button class="btn btn-lg btn-primary">Save changes</button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dalog -->
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/amplayfier-configuration.js"></script>
+  <script src="assets/js/wrapper-adaptor-new-editor.js"></script>
+  <script src="assets/js/amplayfier-editordata.js"></script>
+
+  <script>
+    $(function() {
+      var $btnSets = $('#responsive'),
+        $btnLinks = $btnSets.find('a');
+
+      $btnLinks.click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.user-menu>div.user-menu-content").removeClass("active");
+        $("div.user-menu>div.user-menu-content").eq(index).addClass("active");
+      });
+    })
+  </script>
+
+  <script>
+    $(function() {
+      initPage();
+    })
+  </script>
+
+</div>
