@@ -15,6 +15,11 @@ var PortalSchema = new Schema({
   userId: {
     type: Schema.Types.ObjectId,
     rel: 'User'
+  },
+  storyConfig: Object,
+  storyBoardId: {
+    type: Schema.Types.ObjectId,
+    rel: 'Storyboard'
   }
 });
 

@@ -9,7 +9,9 @@ angular.module('amplayfierSaasApp', [
     'ui.router',
     'ngDragDrop',
     'door3.css',
-    'slick'
+    'slick',
+    'angular-selectize',
+    'angularFileUpload'
   ])
   .config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider

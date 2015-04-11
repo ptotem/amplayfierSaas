@@ -12,7 +12,8 @@ var StoryboardSchema = new Schema({
   description: String,
   captionTitle: String,
   difficulty: String,
-  active: Boolean
+  active: Boolean,
+  storyConfig: Object
 });
 
 module.exports = mongoose.model('Storyboard', StoryboardSchema);

@@ -21,7 +21,8 @@ angular.module('amplayfierSaasApp')
       socket.syncUpdates('portals', $scope.portals);
     });
 
-    $scope.addPortal = function() {
+    $scope.addPortal = function(storyboard) {
+      // console.log(storyboard);
       if ($scope.newPortalName === '') {
         return;
       }
@@ -29,11 +30,16 @@ angular.module('amplayfierSaasApp')
         name: $scope.newPortalName,
         uname: $scope.newPortalName,
         role: "Admin",
-        userId: $scope.currentUser._id
+        userId: $scope.currentUser._id,
+        storyBoardId: storyboard._id,
+        storyConfig: storyboard.storyConfig
       }).success(function(newPortal) {
+        console.log(newPortal);
         $scope.allPortals.push(newPortal);
         // $scope.portals.push(newPortal);
         $('#newPortal').modal("hide");
+        $location.path('/portal/' + newPortal._id);
+
       });
       $scope.newPortalName = '';
 

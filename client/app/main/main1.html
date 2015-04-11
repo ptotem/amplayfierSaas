@@ -361,8 +361,9 @@
           </div>
         </div>
         <div class="modal-footer">
+          <input style="color:black;" type="text" data-placeholder="Enter the name of the Portal" ng-model="newPortalName" />
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Save and Continue</button>
+          <button type="button" class="btn btn-primary" ng-click="addPortal(selectedStoryBoard)">Save and Continue</button>
 
         </div>
       </div>

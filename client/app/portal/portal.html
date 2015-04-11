@@ -40,6 +40,17 @@
       color: gray;
       cursor: pointer;
     }
+    
+    .selectize-input,
+    .selectize-control.single .selectize-input.input-active {
+      background: rgba(32, 32, 32, 0.8);
+    }
+    
+    .selectize-input,
+    .selectize-dropdown,
+    .selectize-input input {
+      color: #43494d;
+    }
   </style>
   <div id="node-dialog-container"></div>
 
@@ -120,31 +131,26 @@
               <div class="col-sm-8">
                 <div class="row">
                   <div class="col-sm-12">
-                    <select class="form-control" rel="selectize" ng-model="selectStoryboard" ng-options="storyboard.name for storyboard in storyboards">
-                      <!-- <option value="">Change Storyboard</option>
-                      <option value=""></option>
-                      <option value="0">ea</option>
-                      <option value="1">laudantium</option>
-                      <option value="2">quae</option>
-                      <option value="3">sed</option>
-                      <option value="4">qui</option>
-                      <option value="5">qui</option>
-                      <option value="6">commodi</option>
-                      <option value="7">nulla</option>
-                      <option value="8">voluptate</option>
-                      <option value="9">praesentium</option> -->
+                    <select style="background: rgba(32, 32, 32, 0.8);color: white;border-radius:4px;box-sizing: border-box;" class="form-control" ng-change="selectStory()" ng-model="selectedStory" ng-options="storyboard.name for storyboard in storyboards track by storyboard._id">
+                      <!-- <option value="">Change Storyboard</option> -->
+                      <!-- <option  value="{{storyboard.name}}">{{storyboard.name}}</option> -->
+
                     </select>
+                    <!-- <selectize config="{create: true, valueField: '_id', labelField: 'name'}" options='storyboards' ng-model="myModel"></selectize> -->
                   </div>
                 </div>
-                <div id="story-wrapper" class="col-sm-12">
+                <div id="story-wrapper" class="col-sm-12" style="display:block;height:500px;background-image:url('{{storyConfig.imgsrc}}/{{storyConfig.background}}')">
                   <div id="story-nodes">
                     <a href="#" class="story-node" ng-repeat="node in storyConfig.nodes" id="story-node-{{$index}}" data-drag="true" jqyoui-draggable ng-model="node.sequence" style="top:{{node.py}}%;left:{{node.px}}%;width:100px;">
                       <img src="{{storyConfig.imgsrc}}/blank-node.png" class="editor-blanks" />
                       <div class="nodenum">{{$index + 1}}</div>
                     </a>
                   </div>
-                  <img id="story-presenter" src="#" alt="" />
-                  <img id="story-nameplate" src="#" alt="" />
+                  <img data-drag="true" jqyoui-draggable id="story-presenter" style="left:{{storyConfig.presenter.px}}%;top:{{storyConfig.presenter.py}}%;width:{{storyConfig.presenter.width}}%;" src="{{storyConfig.imgsrc}}/{{storyConfig.presenter.image}}" alt="" />
+                  <img data-drag="true" jqyoui-draggable id="story-nameplate" style="position:absolute;left:{{storyConfig.nameplate.px}}%;top:{{storyConfig.nameplate.py}}%;width:{{storyConfig.nameplate.width}}%;" src="{{storyConfig.imgsrc}}/{{storyConfig.nameplate.image}}"
+                  alt="" />
+                  <!-- <img id="story-presenter" src="{{storyConfig.imgsrc}}/{{storyConfig.presenter.image}}" alt="" /> -->
+                  <!-- <img id="story-nameplate" src="{{storyConfig.imgsrc}}/{{storyConfig.nameplate.image}}" alt="" /> -->
                 </div>
               </div>
               <div class="col-sm-4">
@@ -155,7 +161,7 @@
                       <span class="btn btn-dark-lter btn-file full-width">
                         <span class="fileinput-new">Background</span>
                         <span class="fileinput-exists">Background</span>
-                        <input type="file" name="...">
+                        <input type="file" name="..." ng-file-select="onFileSelect($files)" multiple>
                       </span>
                       <span class="fileinput-filename"></span>
                       <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
@@ -166,7 +172,7 @@
                       <span class="btn btn-dark-lter btn-file full-width">
                         <span class="fileinput-new">Presenter</span>
                         <span class="fileinput-exists">Presenter</span>
-                        <input type="file" name="...">
+                        <input type="file" name="..." ng-file-select="onFileSelectPresenter($files)" multiple>
                       </span>
                       <span class="fileinput-filename"></span>
                       <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
@@ -177,7 +183,7 @@
                       <span class="btn btn-dark-lter btn-file full-width">
                         <span class="fileinput-new">Nameplate</span>
                         <span class="fileinput-exists">Nameplate</span>
-                        <input type="file" name="...">
+                        <input type="file" name="..." ng-file-select="onFileSelectNamePlate($files)" multiple>
                       </span>
                       <span class="fileinput-filename"></span>
                       <a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
@@ -1162,7 +1168,7 @@
 
   <script>
     $(function() {
-      initPage();
+      // initPage();
     })
   </script>
 
