@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('amplayfierSaasApp')
-  .controller('PortalCtrl', function($scope, Auth) {
+  .controller('PortalCtrl', function($scope, Auth, $http) {
     $scope.message = 'Hello';
     $scope.currentUser = Auth.getCurrentUser();
     // $('#oc-wrapper').fadeIn(1000);
@@ -10,6 +10,31 @@ angular.module('amplayfierSaasApp')
     //     opacity: 1
     //   }, 1000);
     // }, 1000);
+
+    $scope.ppts = [{
+      name: 1
+    }, {
+      name: 2
+    }, {
+      name: 3
+    }];
+
+    // $scope.games = [{
+    //   name: 1
+    // }, {
+    //   name: 2
+    // }, {
+    //   name: 3
+    // }];
+
+    $http.get('/api/games').success(function(games) {
+      $scope.games = games;
+    });
+
+    $http.get('/api/storyboards').success(function(storyboards) {
+      // socket.syncUpdates('storyboard', $scope.storyboards);
+      $scope.storyboards = storyboards;
+    });
 
     $scope.storyConfig = {
       name: "The Amplayfier Blueprints",
@@ -128,4 +153,19 @@ angular.module('amplayfierSaasApp')
         width: 5
       }]
     };
+
+    $scope.loadGame = function(game, $event) {
+      var thisObj = $event.currentTarget;
+      var gameName = game.title;
+      $('#' + gameName.toLowerCase() + '-window').append('<iframe width="98%" height="100%" src="' + game.gamePath + '"></iframe>');
+      $(thisObj).hide();
+      $(thisObj).next().fadeIn();
+    }
+
+    $scope.unloadGame = function($event) {
+      var thisObj = $event.currentTarget;
+      $('.modal-game-window').empty();
+      $(thisObj).hide();
+      $(thisObj).prev().fadeIn();
+    }
   });

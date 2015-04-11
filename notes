@@ -1,0 +1,158 @@
+          <div id="carousel-viewPPT" class="carousel slide" data-ride="carousel" data-interval="false">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <img class="img-responsive" src="http://placehold.it/1200x600/555/000&text=One" alt="...">
+                <div class="carousel-caption">
+                  One Image
+                </div>
+              </div>
+              <div class="item">
+                <img class="img-responsive" src="http://placehold.it/1200x600/fffccc/000&text=Two" alt="...">
+                <div class="carousel-caption">
+                  Another Image
+                </div>
+              </div>
+              <div class="item">
+                <img class="img-responsive" src="http://placehold.it/1200x600/fcf00c/000&text=Three" alt="...">
+                <div class="carousel-caption">
+                  Another Image
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-viewPPT" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-viewPPT" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+
+          </div>
+
+
+
+
+          <div id="carousel-uploadGame" class="carousel slide" data-ride="carousel" data-interval="false">
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="row">
+                  <div class="col-sm-6 col-sm-offset-1 game-img">
+                    <img src="../games/ThisOrThat/image.png" alt="">
+                    <div class="modal-game-window" id="thisorthat-window"></div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h1 class="pull-left no-margin-top no-margin-bottom">MindToss</h1>
+                        <a href="#" class="btn btn-primary-lt btn-lg game-player pull-right" data-game="ThisOrThat">Try it out</a>
+                        <a href="#" class="btn btn-danger-lt btn-lg game-closer pull-right">Close the game</a>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="well">
+
+                      A game where you select a set of words which you need to categorize into one of two sets.
+                      <br>
+                      <br> The game requires a complex design a esthetic and should be used only if you can create appropriate images for the two categories.
+                      <br>
+                      <br>
+                      <span class="box-table">
+                        <span class="box-cell">
+                          <strong>Approach</strong>
+                        </span>
+                        <span class="box-cell">Quiz Style</span>
+                      </span>
+                      <span class="box-table">
+                        <span class="box-cell">
+                          <strong>Replay Value</strong>
+                        </span>
+                        <span class="box-cell">Low</span>
+                      </span>
+                      <span class="box-table">
+                        <span class="box-cell">
+                          <strong>Setup</strong>
+                        </span>
+                        <span class="box-cell">Easy</span>
+                      </span>
+                      <span class="box-table">
+                        <span class="box-cell">
+                          <strong>Customizability</strong>
+                        </span>
+                        <span class="box-cell">Complex</span>
+                      </span>
+                    </div>
+
+                    To select this game and continue:
+                    <input type="text" class="deck-namer" placeholder="Enter a name for the game" style="width:100%;"> You will need to initialize the game once it's added
+
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="row">
+                  <div class="col-sm-6 col-sm-offset-1 game-img">
+                    <img src="../games/BlankMan/image.png" alt="">
+                    <div class="modal-game-window" id="blankman-window"></div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <h2 class="pull-left no-margin-top no-margin-bottom">BlankMan</h2>
+                        <a href="#" class="btn btn-primary-lt btn-lg game-player pull-right" data-game="BlankMan">Try it out</a>
+                        <a href="#" class="btn btn-danger-lt btn-lg game-closer pull-right">Close the game</a>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="well">
+                      A game where you fill in the blanks with a word. You can put in a bank of questions and customize them as per your requirements.
+                      <br>
+                      <br> The game has a simple design aesthetic and can be used easily across use cases.
+                      <br>
+                      <br>
+                      <span class="box-table">
+                        <span class="box-cell">
+                          <strong>Approach</strong>
+                        </span>
+                        <span class="box-cell">Quiz Style</span>
+                      </span>
+                      <span class="box-table">
+                        <span class="box-cell">
+                          <strong>Replay Value</strong>
+                        </span>
+                        <span class="box-cell">Low</span>
+                      </span>
+                      <span class="box-table">
+                        <span class="box-cell">
+                          <strong>Setup</strong>
+                        </span>
+                        <span class="box-cell">Easy</span>
+                      </span>
+                      <span class="box-table">
+                        <span class="box-cell">
+                          <strong>Customizability</strong>
+                        </span>
+                        <span class="box-cell">Easy</span>
+                      </span>
+                    </div>
+                    To select this game and continue:
+                    <input type="text" class="deck-namer" placeholder="Enter a name for the game" style="width:100%;"> You will need to initialize the game once it's added
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control game-modal-control" href="#carousel-uploadGame" role="button" data-slide="prev" style="margin-left:-50px;">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control game-modal-control" href="#carousel-uploadGame" role="button" data-slide="next" style="margin-right:-50px;">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+
+          </div>
