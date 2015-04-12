@@ -141,14 +141,15 @@
                 </div>
                 <div id="story-wrapper" class="col-sm-12" style="display:block;height:500px;background-image:url('{{storyConfig.imgsrc}}/{{storyConfig.background}}')">
                   <div id="story-nodes">
-                    <a href="#" class="story-node" ng-repeat="node in storyConfig.nodes" id="story-node-{{$index}}" data-drag="true" jqyoui-draggable ng-model="node.sequence" style="top:{{node.py}}%;left:{{node.px}}%;width:100px;">
+                    <a href="#" class="story-node" ng-repeat="node in storyConfig.nodes" id="story-node-{{$index}}" data-drag="true" jqyoui-draggable="{onStop:'convertingToPercentage($event)'}" data-category="node" data-seq="{{$index}}" ng-model="node.sequence" style="top:{{node.py}}%;left:{{node.px}}%;width:100px;">
                       <img src="{{storyConfig.imgsrc}}/blank-node.png" class="editor-blanks" />
                       <div class="nodenum">{{$index + 1}}</div>
                     </a>
                   </div>
-                  <img data-drag="true" jqyoui-draggable id="story-presenter" style="left:{{storyConfig.presenter.px}}%;top:{{storyConfig.presenter.py}}%;width:{{storyConfig.presenter.width}}%;" src="{{storyConfig.imgsrc}}/{{storyConfig.presenter.image}}" alt="" />
-                  <img data-drag="true" jqyoui-draggable id="story-nameplate" style="position:absolute;left:{{storyConfig.nameplate.px}}%;top:{{storyConfig.nameplate.py}}%;width:{{storyConfig.nameplate.width}}%;" src="{{storyConfig.imgsrc}}/{{storyConfig.nameplate.image}}"
+                  <img data-drag="true" data-category="presenter" jqyoui-draggable="{onStop:'convertingToPercentage($event)'}" id="story-presenter" style="left:{{storyConfig.presenter.px}}%;top:{{storyConfig.presenter.py}}%;width:{{storyConfig.presenter.width}}%;" src="{{storyConfig.imgsrc}}/{{storyConfig.presenter.image}}"
                   alt="" />
+                  <img data-drag="true" data-category="nameplate" jqyoui-draggable="{onStop:'convertingToPercentage($event)'}" id="story-nameplate" style="position:absolute;left:{{storyConfig.nameplate.px}}%;top:{{storyConfig.nameplate.py}}%;width:{{storyConfig.nameplate.width}}%;"
+                  src="{{storyConfig.imgsrc}}/{{storyConfig.nameplate.image}}" alt="" />
                   <!-- <img id="story-presenter" src="{{storyConfig.imgsrc}}/{{storyConfig.presenter.image}}" alt="" /> -->
                   <!-- <img id="story-nameplate" src="{{storyConfig.imgsrc}}/{{storyConfig.nameplate.image}}" alt="" /> -->
                 </div>
@@ -204,38 +205,38 @@
                 </div>
                 <h3 class="no-margin-top">Customize Chapters</h3>
                 <div class="row">
-                  <div class="col-sm-2">
-                    <div class="node-rep-block">1</div>
+                  <div class="col-sm-2" ng-repeat="node in storyConfig.nodes">
+                    <div class="node-rep-block" ng-click="openEditor($index+1)">{{$index+1}}</div>
+                  </div>
+                  <!-- <div class="col-sm-2">
+                    <div class="node-rep-block" onclick="openEditor(2)">2</div>
                   </div>
                   <div class="col-sm-2">
-                    <div class="node-rep-block">2</div>
+                    <div class="node-rep-block" onclick="openEditor(3)">3</div>
                   </div>
                   <div class="col-sm-2">
-                    <div class="node-rep-block">3</div>
+                    <div class="node-rep-block" onclick="openEditor(4)">4</div>
                   </div>
                   <div class="col-sm-2">
-                    <div class="node-rep-block">4</div>
-                  </div>
-                  <div class="col-sm-2">
-                    <div class="node-rep-block">5</div>
+                    <div class="node-rep-block" onclick="openEditor(5)">5</div>
                   </div>
                   <div class="col-sm-2">
                     <div class="node-rep-block disabled">6</div>
-                  </div>
+                  </div> -->
                 </div>
                 <hr class="edithr">
                 <div class="well edit-intro">
                   <h2>Select a chapter to customize content</h2>
                 </div>
                 <div class="edit-chapters">
-                  <div class="edit-chapter" id="edit-chapter-1">
+                  <div class="edit-chapter" ng-repeat="node in storyConfig.nodes" id="edit-chapter-{{$index+1}}">
                     <h3 class="no-margin-top">
-                      Add Content to Chapter 1
+                      Add Content to Chapter {{$index+1}}
                       <div class="pull-right edit-closer">&times;</div>
                     </h3>
                     <div class="row">
                       <div class="col-sm-12">
-                        <div class="btn btn-dark-lter" data-toggle="modal" href="#uploadPPT">
+                        <div class="btn btn-dark-lter" onclick="$('#uploadPPT').modal('show')" href="#">
                           POWERPOINT
                         </div>
 
@@ -260,7 +261,7 @@
                     </div>
                     <div class="thedecklist well">
                       <ul class="list-group editdecklist">
-                        <li class="list-group-item">
+                        <!-- <li class="list-group-item">
                           <i class="fa fa-file-powerpoint-o"></i>&nbsp; Deck #1 Powerpoint
 
                           <div class="btn-group pull-right">
@@ -483,7 +484,7 @@
                           </div>
 
 
-                        </li>
+                        </li> -->
                       </ul>
                     </div>
                   </div>
@@ -605,50 +606,53 @@
           <a class="btn btn-default" data-dismiss="modal">&times;</a>
           <h4 class="modal-title" id="uploadPPTLabel">Add a Powerpoint Presentation</h4>
         </div>
-        <div class="modal-body">
-          <input type="text" class="deck-namer" placeholder="Enter a name for the deck">
-          <br>
-          <br>
+        <form id="uploadPPTForm" enctype="multipart/form-data">
+          <div class="modal-body">
 
-          <div class="well btn-primary-lter editor-well">
-
-            <h4 class="well-header">Upload PowerPoint File</h4>
-
-            <div class="dummy-checker">
-              <div class="funkyradio">
-                <div class="funkyradio-primary">
-                  <input type="checkbox" name="defaultvideo" id="defaultvideo" />
-                  <label for="defaultvideo">Use a dummy</label>
-                </div>
-              </div>
-            </div>
-
+            <input type="text" class="deck-namer" placeholder="Enter a name for the deck" ng-model="pptDeckName">
             <br>
-            <div class="fileinput fileinput-new" data-provides="fileinput">
-              <div class="input-group">
-                <div class="form-control" data-trigger="fileinput">
-                  <i class="fa fa-file fileinput-exists"></i>
-                  <span class="fileinput-filename"></span>
+            <br>
+
+            <div class="well btn-primary-lter editor-well">
+
+              <h4 class="well-header">Upload PowerPoint File</h4>
+
+              <div class="dummy-checker">
+                <div class="funkyradio">
+                  <div class="funkyradio-primary">
+                    <input type="checkbox" name="defaultvideo" id="defaultvideo" ng-model="useDummy" />
+                    <label for="defaultvideo">Use a dummy</label>
+                  </div>
                 </div>
-                <span class="input-group-addon btn btn-file">
-                  <span class="fileinput-new">Select File</span>
-                  <span class="fileinput-exists">Change</span>
-                  <input type="file" name="...">
-                </span>
-                <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
               </div>
+
+              <br>
+              <div class="fileinput fileinput-new" data-provides="fileinput">
+                <div class="input-group">
+                  <div class="form-control" data-trigger="fileinput">
+                    <i class="fa fa-file fileinput-exists"></i>
+                    <span class="fileinput-filename"></span>
+                  </div>
+                  <span class="input-group-addon btn btn-file">
+                    <span class="fileinput-new">Select File</span>
+                    <span class="fileinput-exists">Change</span>
+                    <input type="file" name="..." ng-file-select ng-model="pptFile">
+                  </span>
+                  <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                </div>
+              </div>
+
             </div>
 
           </div>
 
-        </div>
+          <div class="modal-footer">
+            <div class="btn-group">
+              <button class="btn btn-lg btn-primary" ng-click="addPPTDeck()">Save changes</button>
+            </div>
 
-        <div class="modal-footer">
-          <div class="btn-group">
-            <button class="btn btn-lg btn-primary">Save changes</button>
           </div>
-
-        </div>
+        </form>
         <!-- /.modal-content -->
       </div>
       <!-- /.modal-dalog -->

@@ -21,7 +21,7 @@ function initPage() {
 
   /* Show the screen */
   setTimeout(function() {
-    createLandscapeView();
+    // createLandscapeView();
     // drawNodes();
     $('#story-wrapper').fadeIn('slow');
 

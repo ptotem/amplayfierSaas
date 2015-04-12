@@ -52,12 +52,16 @@ exports.update = function(req, res) {
     if (!portal) {
       return res.send(404);
     }
+    // console.log(req.body);
     var updated = _.merge(portal, req.body);
-    updated.save(function(err) {
+    // console.log(updated);
+    updated.save(function(err, r) {
       if (err) {
         return handleError(res, err);
+      } else {
+        console.log(portal.storyConfig);
+        return res.json(200, portal);
       }
-      return res.json(200, portal);
     });
   });
 };
@@ -236,6 +240,27 @@ exports.changeNamePlate = function(req, res) {
       });
     }
   });
+}
+
+exports.updatePosition = function(req, res) {
+  Portal.update({
+    _id: mongoose.Types.ObjectId(req.params.id)
+  }, {
+    $set: {
+      storyConfig: req.body.storyConfig
+    }
+  }, function(err, portal) {
+    if (err) {
+      handleError(res, err);
+    }
+    if (!portal) {
+      res.send(404);
+    } else {
+      res.json(200, portal)
+    }
+
+  })
+
 }
 
 function handleError(res, err) {

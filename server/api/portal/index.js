@@ -17,5 +17,6 @@ router.get('/user/:id', controller.getUserPortals);
 router.post('/picture/addBackground', multipartMiddleware, controller.addBackground);
 router.post('/picture/changePresenter', multipartMiddleware, controller.changePresenter);
 router.post('/picture/changeNamePlate', multipartMiddleware, controller.changeNamePlate);
+router.put('/updatePosition/:id', controller.updatePosition);
 
 module.exports = router;

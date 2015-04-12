@@ -1,0 +1,224 @@
+                        <li class="list-group-item">
+                          <i class="fa fa-file-powerpoint-o"></i>&nbsp; Deck #1 Powerpoint
+
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-arrows"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li>&nbsp;&nbsp;&nbsp;
+                                <strong>Move To</strong>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Chapter 2</a>
+                              </li>
+                              <li><a href="#">Chapter 3</a>
+                              </li>
+                              <li><a href="#">Chapter 4</a>
+                              </li>
+                              <li><a href="#">Chapter 5</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <a class="btn btn-danger-lter btn-xs pull-right" title="Delete"> <i class="fa fa-minus-square"></i> </a>
+                          <a class="btn btn-primary-lter btn-xs pull-right" data-toggle="modal" href="#uploadPPT" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-dark-lter btn-xs pull-right" onclick="$('#viewPPTModal').modal('show');" href="#" data-itemid="1" title="View"><i class="fa fa-eye"></i></a>
+
+
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-file-powerpoint-o"></i>&nbsp; Deck #1 Powerpoint
+
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-arrows"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li>&nbsp;&nbsp;&nbsp;
+                                <strong>Move To</strong>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Chapter 2</a>
+                              </li>
+                              <li><a href="#">Chapter 3</a>
+                              </li>
+                              <li><a href="#">Chapter 4</a>
+                              </li>
+                              <li><a href="#">Chapter 5</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <a class="btn btn-danger-lter btn-xs pull-right" title="Delete"> <i class="fa fa-minus-square"></i> </a>
+                          <a class="btn btn-primary-lter btn-xs pull-right" data-toggle="modal" href="#uploadPPT" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-dark-lter btn-xs pull-right" data-toggle="modal" href="#viewPPTModal" data-itemid="1" title="View"><i class="fa fa-eye"></i></a>
+
+
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-file-powerpoint-o"></i>&nbsp; Deck #1 Powerpoint
+
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-arrows"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li>&nbsp;&nbsp;&nbsp;
+                                <strong>Move To</strong>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Chapter 2</a>
+                              </li>
+                              <li><a href="#">Chapter 3</a>
+                              </li>
+                              <li><a href="#">Chapter 4</a>
+                              </li>
+                              <li><a href="#">Chapter 5</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <a class="btn btn-danger-lter btn-xs pull-right" title="Delete"> <i class="fa fa-minus-square"></i> </a>
+                          <a class="btn btn-primary-lter btn-xs pull-right" data-toggle="modal" href="#uploadPPT" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-dark-lter btn-xs pull-right" data-toggle="modal" href="#viewPPTModal" data-itemid="1" title="View"><i class="fa fa-eye"></i></a>
+
+
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-file-powerpoint-o"></i>&nbsp; Deck #1 Powerpoint
+
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-arrows"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li>&nbsp;&nbsp;&nbsp;
+                                <strong>Move To</strong>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Chapter 2</a>
+                              </li>
+                              <li><a href="#">Chapter 3</a>
+                              </li>
+                              <li><a href="#">Chapter 4</a>
+                              </li>
+                              <li><a href="#">Chapter 5</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <a class="btn btn-danger-lter btn-xs pull-right" title="Delete"> <i class="fa fa-minus-square"></i> </a>
+                          <a class="btn btn-primary-lter btn-xs pull-right" data-toggle="modal" href="#uploadPPT" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-dark-lter btn-xs pull-right" data-toggle="modal" href="#viewPPTModal" data-itemid="1" title="View"><i class="fa fa-eye"></i></a>
+
+
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-file-powerpoint-o"></i>&nbsp; Deck #1 Powerpoint
+
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-arrows"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li>&nbsp;&nbsp;&nbsp;
+                                <strong>Move To</strong>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Chapter 2</a>
+                              </li>
+                              <li><a href="#">Chapter 3</a>
+                              </li>
+                              <li><a href="#">Chapter 4</a>
+                              </li>
+                              <li><a href="#">Chapter 5</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <a class="btn btn-danger-lter btn-xs pull-right" title="Delete"> <i class="fa fa-minus-square"></i> </a>
+                          <a class="btn btn-primary-lter btn-xs pull-right" data-toggle="modal" href="#uploadPPT" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-dark-lter btn-xs pull-right" data-toggle="modal" href="#viewPPTModal" data-itemid="1" title="View"><i class="fa fa-eye"></i></a>
+
+
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-youtube-play"></i>&nbsp; Deck #2 Video
+
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-arrows"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li>&nbsp;&nbsp;&nbsp;
+                                <strong>Move To</strong>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Chapter 2</a>
+                              </li>
+                              <li><a href="#">Chapter 3</a>
+                              </li>
+                              <li><a href="#">Chapter 4</a>
+                              </li>
+                              <li><a href="#">Chapter 5</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <a class="btn btn-danger-lter btn-xs pull-right" title="Delete"> <i class="fa fa-minus-square"></i> </a>
+                          <a class="btn btn-primary-lter btn-xs pull-right" data-toggle="modal" href="#uploadVideo" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-dark-lter btn-xs pull-right" data-toggle="modal" href="#viewVideoModal" data-itemid="1" title="View"><i class="fa fa-eye"></i></a>
+
+                        </li>
+                        <li class="list-group-item">
+                          <i class="fa fa-gamepad"></i>&nbsp; Deck #3 Game
+
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default btn-xs dropdown-toggle pull-right" data-toggle="dropdown" aria-expanded="false">
+                              <i class="fa fa-arrows"></i>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                              <li>&nbsp;&nbsp;&nbsp;
+                                <strong>Move To</strong>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a href="#">Chapter 2</a>
+                              </li>
+                              <li><a href="#">Chapter 3</a>
+                              </li>
+                              <li><a href="#">Chapter 4</a>
+                              </li>
+                              <li><a href="#">Chapter 5</a>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <a class="btn btn-danger-lter btn-xs pull-right" title="Delete"> <i class="fa fa-minus-square"></i> </a>
+                          <a class="btn btn-primary-lter btn-xs pull-right" data-toggle="modal" href="#uploadGame" title="Edit"><i class="fa fa-edit"></i></a>
+                          <a class="btn btn-dark-lter btn-xs pull-right" data-toggle="modal" href="#viewGameModal" data-itemid="1" title="View"><i class="fa fa-eye"></i></a>
+                          <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                              Setup
+                              <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+
+                              <li>
+                                <a data-toggle="modal" href="#questionBankModal">Upload Questions</a>
+                              </li>
+                              <li>
+                                <a data-toggle="modal" href="#addAQuestionModal">Add a Question</a>
+                              </li>
+                              <li><a data-toggle="modal" href="#editQuestionModal">Edit a Question</a>
+                              </li>
+                              <li class="divider"></li>
+                              <li><a data-toggle="modal" href="#setParametersModal">Set Parameters</a>
+                              </li>
+                              <li><a href="#">Customize Design</a>
+                              </li>
+                            </ul>
+                          </div>
+
+
+                        </li>

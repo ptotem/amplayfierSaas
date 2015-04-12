@@ -135,43 +135,9 @@ angular.module('amplayfierSaasApp')
     }
 
     $scope.initPage = function() {
-
       /* Set the Title of the Platform */
       $('title').text($scope.storyConfig.name + " Editor");
-
-      /* Set the Wrapper Design */
-      setDesign($scope.storyConfig);
-
-      /* Show the screen */
-      setTimeout(function() {
-        createLandscapeView();
-        $('#story-wrapper').fadeIn('slow');
-
-      }, 500);
-    }
-
-    var setDesign = function(storyConfig) {
-
-      /* Set the Story Nameplate */
-      // $('#story-nameplate').css({
-      //   left: storyConfig.nameplate.px + "%",
-      //   top: storyConfig.nameplate.py + "%",
-      //   width: storyConfig.nameplate.width + "%",
-      //   position: "absolute"
-      // }).draggable();
-      //
-      // /* Set the Story Presenter */
-      // $('#story-presenter').css({
-      //   left: storyConfig.presenter.px + "%",
-      //   top: storyConfig.presenter.py + "%",
-      //   width: storyConfig.presenter.width + "%",
-      // }).draggable();
-
-      // $('#story-wrapper').css({
-      //     'background-image': 'url(' + storyConfig.imgsrc + "/" + storyConfig.background + ')',
-      //   height: $('#story-wrapper').width() * 9 / 16
-      // });
-
+      // createLandscapeView();
     }
 
     $scope.selectStory = function() {
@@ -180,5 +146,78 @@ angular.module('amplayfierSaasApp')
       console.log($scope.selectedStory);
     }
 
+    $scope.openEditor = function(nodeId) {
+      $('.edit-intro').hide();
+      $('.node-rep-block').removeClass('active-rep-block');
+      $('.node-rep-block').eq(parseInt(nodeId) - 1).addClass('active-rep-block');
+      $('.editdecklist').sortable();
+      $('.edit-chapter').fadeOut(function() {
+        $('#edit-chapter-' + nodeId).fadeIn(function() {
+          $(this).find('.edit-closer').unbind('click').on('click', function() {
+            $('.node-rep-block').removeClass('active-rep-block');
+            $('.edit-chapter').hide();
+            $('.edit-intro').fadeIn();
+          })
+        });
+      })
+    }
+
+    $scope.closeEditor = function() {
+      $('#story-wrapper').animate({
+        marginLeft: 0
+      }, function() {
+        $('#editor-panel').fadeOut();
+        $('.story-node').css('pointer-events', 'auto');
+      })
+    }
+
+    $scope.convertingToPercentage = function(thisObj) {
+      // console.log($scope.storyConfig.presenter);
+      var thisEle = $(thisObj.target);
+      var l = Math.round(100 * parseFloat($(thisEle).css("left")) / parseFloat($(thisEle).parent().css("width"))) + "%";
+      var t = Math.round(100 * parseFloat($(thisEle).css("top")) / parseFloat($(thisEle).parent().css("height"))) + "%";
+      $(thisEle).css("top", t);
+      $(thisEle).css("left", l);
+      if ($(thisEle).attr("data-category") === "presenter") {
+        $scope.storyConfig.presenter.px = l;
+        $scope.storyConfig.presenter.py = t;
+      } else if ($(thisEle).attr("data-category") === "nameplate") {
+        $scope.storyConfig.nameplate.px = l;
+        $scope.storyConfig.nameplate.py = t;
+      } else if ($(thisEle).attr('data-category') === "node") {
+        var index = _.indexOf($scope.storyConfig.nodes, _.find($scope.storyConfig.nodes, function(node) {
+          return node.sequence === parseInt($(thisEle).attr("data-seq"));
+        }));
+        $scope.storyConfig.nodes[index].px = l;
+        $scope.storyConfig.nodes[index].py = t;
+      }
+      $http.put('/api/portals/updatePosition/' + $stateParams.portalId, {
+        storyConfig: $scope.storyConfig
+      }).success(function(port) {
+        console.log("Updated successfully!");
+      });
+      console.log($scope.storyConfig.presenter);
+    }
+
+    $scope.addPPTDeck = function($files) {
+      console.log($scope.pptFile[0])
+      $('#uploadPPT').modal('hide');
+      $upload.upload({
+        url: '/api/decks/portal/addPPTDeck',
+        fields: {
+          name: $scope.pptName,
+          useDummy: $scope.useDummy,
+          userId: $scope.currentUser._id,
+          portalId: $stateParams.portalId
+        },
+        file: $scope.pptFile[0],
+        progress: function(evt) {
+          console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
+        }
+      }).success(function(data, status, headers, config) {
+        // file is uploaded successfully
+        console.log(data);
+      });
+    }
 
   });
