@@ -12,7 +12,10 @@ router.get('/:id', controller.show);
 router.post('/', controller.create);
 router.put('/:id', controller.update);
 router.patch('/:id', controller.update);
-router.delete('/:id', controller.destroy);
-router.post('/portal/addPPTDeck', multipartMiddleware, controller.addPPTDeck);
+router.delete('/:id/:userId', controller.destroy);
+router.post('/portal/addPPTDeck', multipartMiddleware, controller.addPPTDeck)
+router.post('/portal/updatePPTDeck/:id', multipartMiddleware, controller.updatePPTDeck);
+router.get('/portal/showDeckByPortal/:id', controller.showDeckByPortal);
+router.post('/moveTo/node/:nodeNo/:deckId/:userId', controller.moveToNode);
 
 module.exports = router;

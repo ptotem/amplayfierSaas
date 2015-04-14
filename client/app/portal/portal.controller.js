@@ -41,7 +41,9 @@ angular.module('amplayfierSaasApp')
         console.log($scope.storyConfig)
         $scope.initPage();
       });
-
+      $http.get('/api/decks/portal/showDeckByPortal/' + $stateParams.portalId).success(function(nodes) {
+        $scope.portalNodes = nodes;
+      });
     });
 
     $scope.onFileSelect = function($files) {
@@ -147,6 +149,7 @@ angular.module('amplayfierSaasApp')
     }
 
     $scope.openEditor = function(nodeId) {
+      $scope.selectedNodeId = nodeId;
       $('.edit-intro').hide();
       $('.node-rep-block').removeClass('active-rep-block');
       $('.node-rep-block').eq(parseInt(nodeId) - 1).addClass('active-rep-block');
@@ -174,8 +177,8 @@ angular.module('amplayfierSaasApp')
     $scope.convertingToPercentage = function(thisObj) {
       // console.log($scope.storyConfig.presenter);
       var thisEle = $(thisObj.target);
-      var l = Math.round(100 * parseFloat($(thisEle).css("left")) / parseFloat($(thisEle).parent().css("width"))) + "%";
-      var t = Math.round(100 * parseFloat($(thisEle).css("top")) / parseFloat($(thisEle).parent().css("height"))) + "%";
+      var l = Math.round(100 * parseFloat($(thisEle).css("left")) / parseFloat($(thisEle).parents('#story-wrapper').css("width"))) + "%";
+      var t = Math.round(100 * parseFloat($(thisEle).css("top")) / parseFloat($(thisEle).parents('#story-wrapper').css("height"))) + "%";
       $(thisEle).css("top", t);
       $(thisEle).css("left", l);
       if ($(thisEle).attr("data-category") === "presenter") {
@@ -200,23 +203,102 @@ angular.module('amplayfierSaasApp')
     }
 
     $scope.addPPTDeck = function($files) {
-      console.log($scope.pptFile[0])
       $('#uploadPPT').modal('hide');
-      $upload.upload({
-        url: '/api/decks/portal/addPPTDeck',
-        fields: {
+      if (!$scope.editDeck) {
+        var fields = {
           name: $scope.pptName,
           useDummy: $scope.useDummy,
           userId: $scope.currentUser._id,
-          portalId: $stateParams.portalId
-        },
+          portalId: $stateParams.portalId,
+          deckType: "Powerpoint",
+          sequence: 0,
+          nodeNo: $scope.nodeNo
+        }
+        var url = '/api/decks/portal/addPPTDeck'
+      } else {
+        var url = '/api/decks/portal/updatePPTDeck/' + $scope.selectedDeck._id;
+        var fields = {
+          name: $scope.pptName,
+          userId: $scope.currentUser._id,
+          portalId: $stateParams.portalId,
+          nodeNo: $scope.selectedNodeId
+        }
+      }
+
+      $upload.upload({
+        url: url,
+        fields: fields,
         file: $scope.pptFile[0],
         progress: function(evt) {
           console.log('percent: ' + parseInt(100.0 * evt.loaded / evt.total));
         }
       }).success(function(data, status, headers, config) {
         // file is uploaded successfully
+        $scope.selectedDeck = null;
+        $scope.editDeck = false;
         console.log(data);
+        $http.get('/api/decks/portal/showDeckByPortal/' + $stateParams.portalId).success(function(nodes) {
+          $scope.portalNodes = nodes;
+        });
+      });
+    }
+
+    $scope.callUploadPPT = function(index) {
+      $scope.nodeNo = index;
+      $('#uploadPPT').modal('show');
+    }
+
+    $scope.callEditPPT = function(deck) {
+      $scope.selectedDeck = deck;
+      $scope.editDeck = true;
+      $('#uploadPPT').modal('show');
+    }
+
+    $scope.showViewPPTModal = function(deck) {
+      $scope.selectedPPT = _.sortBy(deck.slides, 'sequence');
+      console.log($scope.selectedPPT);
+      $('#viewPPTModal').modal('show');
+      $('#viewPPTModal').find('.modal-content').hide();
+      setTimeout(function() {
+        $('.carousel-indicators').find('li').trigger('click');
+        // $($('.carousel-indicators').find('li')[0]).trigger('click');
+        $('#viewPPTModal').find('.modal-content').fadeIn(500);
+      }, 50);
+
+    };
+
+    $scope.closeViewPPTModal = function() {
+      $scope.selectedPPT = [];
+      $('#viewPPTModal').modal('hide');
+    }
+
+    //function to remove deck from chapter
+    $scope.removeDeck = function(deck) {
+      $http.delete('/api/decks/' + deck._id + "/" + $scope.currentUser._id).success(function() {
+        console.log("Deck Deleted");
+        $scope.portalNodes[deck.nodeNo].decks = _.reject($scope.portalNodes[deck.nodeNo].decks, function(d) {
+          return d._id.toString() === deck._id.toString();
+        });
+      });
+    }
+
+    // $scope.generateMoveToChapterTitle = function(index) {
+    //   console.log(index);
+    //   var arr = [];
+    //   for (var i = 0; i < $scope.storyConfig.nodes.length; i++) {
+    //     if (i !== index) {
+    //       arr.push({
+    //         name: "Chapter " + (i + 1),
+    //         ind: i
+    //       })
+    //     }
+    //   }
+    //   return arr;
+    // }
+    $scope.moveToChapter = function(nodeNo, deck) {
+      alert(5);
+      $http.post('/api/decks/moveTo/node/' + nodeNo + '/' + deck._id + '/' + $scope.currentUser._id).success(function(deck) {
+        console.log(deck);
       });
     }
 

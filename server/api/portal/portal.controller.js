@@ -243,25 +243,39 @@ exports.changeNamePlate = function(req, res) {
 }
 
 exports.updatePosition = function(req, res) {
-  Portal.update({
-    _id: mongoose.Types.ObjectId(req.params.id)
-  }, {
-    $set: {
-      storyConfig: req.body.storyConfig
-    }
-  }, function(err, portal) {
-    if (err) {
-      handleError(res, err);
-    }
-    if (!portal) {
-      res.send(404);
-    } else {
-      res.json(200, portal)
-    }
+    Portal.update({
+      _id: mongoose.Types.ObjectId(req.params.id)
+    }, {
+      $set: {
+        storyConfig: req.body.storyConfig
+      }
+    }, function(err, portal) {
+      if (err) {
+        handleError(res, err);
+      }
+      if (!portal) {
+        res.send(404);
+      } else {
+        res.json(200, portal)
+      }
 
-  })
+    })
 
-}
+  }
+  //
+  // exports.showPortalsWithNode = function(req, res) {
+  //   Portal.find({
+  //     _id: mongoose.Types.ObjectId(req.params._id)
+  //   }).populate({model:'Cycle',path:'cycleId'}).exec(function(err, portal) {
+  //     if (err) {
+  //       handleError(res, err);
+  //     }
+  //     if (!portal) {
+  //       res.send(404);
+  //     }
+  //     res.json(200, portal)
+  //   });
+  // }
 
 function handleError(res, err) {
   return res.send(500, err);
