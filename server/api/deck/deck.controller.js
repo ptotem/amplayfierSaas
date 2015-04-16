@@ -152,7 +152,10 @@ exports.updatePPTDeck = function(req, res) {
 exports.showDeckByPortal = function(req, res) {
   Deck.find({
     portalId: mongoose.Types.ObjectId(req.params.id)
-  }, function(err, decks) {
+  }).populate({
+    path: "portalId",
+    model: "Portal"
+  }).exec(function(err, decks) {
     if (err) {
       handleError(res, err);
     }

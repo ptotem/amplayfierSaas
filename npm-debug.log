@@ -1,0 +1,427 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.37
+4 verbose node symlink /usr/bin/node
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/home/sunny/amplayfierSaas',
+6 verbose install   [ 'body-parser',
+6 verbose install     'composable-middleware',
+6 verbose install     'compression',
+6 verbose install     'connect-busboy',
+6 verbose install     'connect-mongo',
+6 verbose install     'connect-multiparty',
+6 verbose install     'cookie-parser',
+6 verbose install     'ejs',
+6 verbose install     'errorhandler',
+6 verbose install     'express',
+6 verbose install     'express-jwt',
+6 verbose install     'express-session',
+6 verbose install     'faker',
+6 verbose install     'fs-extra',
+6 verbose install     'jsonwebtoken',
+6 verbose install     'lodash',
+6 verbose install     'method-override',
+6 verbose install     'mongoose',
+6 verbose install     'morgan',
+6 verbose install     'passport',
+6 verbose install     'passport-facebook',
+6 verbose install     'passport-google-oauth',
+6 verbose install     'passport-local',
+6 verbose install     'passport-twitter',
+6 verbose install     'serve-favicon',
+6 verbose install     'socket.io',
+6 verbose install     'socket.io-client',
+6 verbose install     'socketio-jwt',
+6 verbose install     'grunt',
+6 verbose install     'grunt-autoprefixer',
+6 verbose install     'grunt-wiredep',
+6 verbose install     'grunt-concurrent',
+6 verbose install     'grunt-contrib-clean',
+6 verbose install     'grunt-contrib-concat',
+6 verbose install     'grunt-contrib-copy',
+6 verbose install     'grunt-contrib-cssmin',
+6 verbose install     'grunt-contrib-htmlmin',
+6 verbose install     'grunt-contrib-imagemin',
+6 verbose install     'grunt-contrib-jshint',
+6 verbose install     'grunt-contrib-uglify',
+6 verbose install     'grunt-contrib-watch',
+6 verbose install     'grunt-google-cdn',
+6 verbose install     'grunt-newer',
+6 verbose install     'grunt-ng-annotate',
+6 verbose install     'grunt-rev',
+6 verbose install     'grunt-svgmin',
+6 verbose install     'grunt-usemin',
+6 verbose install     'grunt-env',
+6 verbose install     'grunt-node-inspector',
+6 verbose install     'grunt-nodemon',
+6 verbose install     'grunt-angular-templates',
+6 verbose install     'grunt-dom-munger',
+6 verbose install     'grunt-protractor-runner',
+6 verbose install     'grunt-asset-injector',
+6 verbose install     'grunt-karma',
+6 verbose install     'grunt-build-control',
+6 verbose install     'grunt-mocha-test',
+6 verbose install     'jit-grunt',
+6 verbose install     'time-grunt',
+6 verbose install     'grunt-express-server',
+6 verbose install     'grunt-open',
+6 verbose install     'open',
+6 verbose install     'jshint-stylish',
+6 verbose install     'connect-livereload',
+6 verbose install     'karma-ng-scenario',
+6 verbose install     'karma-firefox-launcher',
+6 verbose install     'karma-script-launcher',
+6 verbose install     'karma-html2js-preprocessor',
+6 verbose install     'karma-ng-jade2js-preprocessor',
+6 verbose install     'karma-jasmine',
+6 verbose install     'karma-chrome-launcher',
+6 verbose install     'requirejs',
+6 verbose install     'karma-requirejs',
+6 verbose install     'karma-coffee-preprocessor',
+6 verbose install     'karma-jade-preprocessor',
+6 verbose install     'karma-phantomjs-launcher',
+6 verbose install     'karma',
+6 verbose install     'karma-ng-html2js-preprocessor',
+6 verbose install     'supertest',
+6 verbose install     'should' ] ]
+7 info preinstall amplayfier-saas@0.0.0
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping grunt-contrib-watch@~0.6.1 /home/sunny/amplayfierSaas
+10 verbose already installed skipping grunt-google-cdn@~0.4.0 /home/sunny/amplayfierSaas
+11 verbose already installed skipping grunt-newer@~0.7.0 /home/sunny/amplayfierSaas
+12 verbose already installed skipping grunt-ng-annotate@^0.2.3 /home/sunny/amplayfierSaas
+13 verbose already installed skipping grunt-rev@~0.1.0 /home/sunny/amplayfierSaas
+14 verbose already installed skipping grunt-svgmin@~0.4.0 /home/sunny/amplayfierSaas
+15 verbose already installed skipping grunt-usemin@~2.1.1 /home/sunny/amplayfierSaas
+16 verbose already installed skipping grunt-env@~0.4.1 /home/sunny/amplayfierSaas
+17 verbose already installed skipping grunt-node-inspector@~0.1.5 /home/sunny/amplayfierSaas
+18 verbose already installed skipping grunt-nodemon@~0.2.0 /home/sunny/amplayfierSaas
+19 verbose already installed skipping grunt-angular-templates@^0.5.4 /home/sunny/amplayfierSaas
+20 verbose already installed skipping grunt-dom-munger@^3.4.0 /home/sunny/amplayfierSaas
+21 verbose already installed skipping grunt-protractor-runner@^1.1.0 /home/sunny/amplayfierSaas
+22 verbose already installed skipping grunt-asset-injector@^0.1.0 /home/sunny/amplayfierSaas
+23 verbose already installed skipping grunt-karma@~0.8.2 /home/sunny/amplayfierSaas
+24 verbose cache add [ 'grunt-build-control@git+https://github.com/DaftMonk/grunt-build-control',
+24 verbose cache add   null ]
+25 verbose cache add name=undefined spec="grunt-build-control@git+https://github.com/DaftMonk/grunt-build-control" args=["grunt-build-control@git+https://github.com/DaftMonk/grunt-build-control",null]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: 'grunt-build-control@git+https://github.com/DaftMonk/grunt-build-control',
+26 verbose parsed url   path: 'grunt-build-control@git+https://github.com/DaftMonk/grunt-build-control',
+26 verbose parsed url   href: 'grunt-build-control@git+https://github.com/DaftMonk/grunt-build-control' }
+27 verbose already installed skipping grunt-mocha-test@~0.10.2 /home/sunny/amplayfierSaas
+28 verbose already installed skipping jit-grunt@^0.5.0 /home/sunny/amplayfierSaas
+29 verbose already installed skipping time-grunt@~0.3.1 /home/sunny/amplayfierSaas
+30 verbose already installed skipping grunt-express-server@~0.4.17 /home/sunny/amplayfierSaas
+31 verbose cache add name="grunt-build-control" spec="git+https://github.com/DaftMonk/grunt-build-control" args=["grunt-build-control","git+https://github.com/DaftMonk/grunt-build-control"]
+32 verbose parsed url { protocol: 'git+https:',
+32 verbose parsed url   slashes: true,
+32 verbose parsed url   auth: null,
+32 verbose parsed url   host: 'github.com',
+32 verbose parsed url   port: null,
+32 verbose parsed url   hostname: 'github.com',
+32 verbose parsed url   hash: null,
+32 verbose parsed url   search: null,
+32 verbose parsed url   query: null,
+32 verbose parsed url   pathname: '/DaftMonk/grunt-build-control',
+32 verbose parsed url   path: '/DaftMonk/grunt-build-control',
+32 verbose parsed url   href: 'git+https://github.com/DaftMonk/grunt-build-control' }
+33 verbose already installed skipping grunt-open@~0.2.3 /home/sunny/amplayfierSaas
+34 verbose already installed skipping open@~0.0.4 /home/sunny/amplayfierSaas
+35 silly lockFile 7e4d577b-com-DaftMonk-grunt-build-control https://github.com/DaftMonk/grunt-build-control
+36 verbose lock https://github.com/DaftMonk/grunt-build-control /home/sunny/.npm/7e4d577b-com-DaftMonk-grunt-build-control.lock
+37 verbose already installed skipping jshint-stylish@~0.1.5 /home/sunny/amplayfierSaas
+38 verbose already installed skipping connect-livereload@~0.4.0 /home/sunny/amplayfierSaas
+39 verbose already installed skipping karma-ng-scenario@~0.1.0 /home/sunny/amplayfierSaas
+40 verbose already installed skipping karma-firefox-launcher@~0.1.3 /home/sunny/amplayfierSaas
+41 verbose already installed skipping karma-script-launcher@~0.1.0 /home/sunny/amplayfierSaas
+42 verbose already installed skipping karma-html2js-preprocessor@~0.1.0 /home/sunny/amplayfierSaas
+43 verbose already installed skipping karma-ng-jade2js-preprocessor@^0.1.2 /home/sunny/amplayfierSaas
+44 verbose already installed skipping karma-jasmine@~0.1.5 /home/sunny/amplayfierSaas
+45 verbose already installed skipping karma-chrome-launcher@~0.1.3 /home/sunny/amplayfierSaas
+46 verbose already installed skipping requirejs@~2.1.11 /home/sunny/amplayfierSaas
+47 verbose already installed skipping karma-requirejs@~0.2.1 /home/sunny/amplayfierSaas
+48 verbose already installed skipping karma-coffee-preprocessor@~0.2.1 /home/sunny/amplayfierSaas
+49 verbose already installed skipping karma-jade-preprocessor@0.0.11 /home/sunny/amplayfierSaas
+50 verbose already installed skipping karma-phantomjs-launcher@~0.1.4 /home/sunny/amplayfierSaas
+51 verbose already installed skipping karma@~0.12.9 /home/sunny/amplayfierSaas
+52 verbose already installed skipping karma-ng-html2js-preprocessor@~0.1.0 /home/sunny/amplayfierSaas
+53 verbose already installed skipping supertest@~0.11.0 /home/sunny/amplayfierSaas
+54 verbose already installed skipping should@~3.3.1 /home/sunny/amplayfierSaas
+55 verbose already installed skipping body-parser@~1.5.0 /home/sunny/amplayfierSaas
+56 verbose already installed skipping composable-middleware@^0.3.0 /home/sunny/amplayfierSaas
+57 verbose already installed skipping compression@~1.0.1 /home/sunny/amplayfierSaas
+58 verbose addRemoteGit [ 'https://github.com/DaftMonk/grunt-build-control', 'master' ]
+59 verbose already installed skipping connect-busboy@0.0.2 /home/sunny/amplayfierSaas
+60 verbose already installed skipping connect-mongo@^0.4.1 /home/sunny/amplayfierSaas
+61 verbose already installed skipping connect-multiparty@^1.2.5 /home/sunny/amplayfierSaas
+62 verbose already installed skipping cookie-parser@~1.0.1 /home/sunny/amplayfierSaas
+63 verbose already installed skipping ejs@~0.8.4 /home/sunny/amplayfierSaas
+64 verbose already installed skipping errorhandler@~1.0.0 /home/sunny/amplayfierSaas
+65 verbose already installed skipping express@~4.0.0 /home/sunny/amplayfierSaas
+66 verbose already installed skipping express-jwt@^0.1.3 /home/sunny/amplayfierSaas
+67 verbose already installed skipping express-session@~1.0.2 /home/sunny/amplayfierSaas
+68 verbose already installed skipping faker@^2.1.2 /home/sunny/amplayfierSaas
+69 verbose already installed skipping fs-extra@^0.18.0 /home/sunny/amplayfierSaas
+70 verbose already installed skipping jsonwebtoken@^0.3.0 /home/sunny/amplayfierSaas
+71 verbose already installed skipping lodash@~2.4.1 /home/sunny/amplayfierSaas
+72 verbose already installed skipping method-override@~1.0.0 /home/sunny/amplayfierSaas
+73 verbose already installed skipping mongoose@~3.8.8 /home/sunny/amplayfierSaas
+74 verbose already installed skipping morgan@~1.0.0 /home/sunny/amplayfierSaas
+75 verbose already installed skipping passport@~0.2.0 /home/sunny/amplayfierSaas
+76 verbose cache add [ 'passport-facebook@latest', null ]
+77 verbose cache add name=undefined spec="passport-facebook@latest" args=["passport-facebook@latest",null]
+78 verbose parsed url { protocol: null,
+78 verbose parsed url   slashes: null,
+78 verbose parsed url   auth: null,
+78 verbose parsed url   host: null,
+78 verbose parsed url   port: null,
+78 verbose parsed url   hostname: null,
+78 verbose parsed url   hash: null,
+78 verbose parsed url   search: null,
+78 verbose parsed url   query: null,
+78 verbose parsed url   pathname: 'passport-facebook@latest',
+78 verbose parsed url   path: 'passport-facebook@latest',
+78 verbose parsed url   href: 'passport-facebook@latest' }
+79 verbose cache add [ 'passport-google-oauth@latest', null ]
+80 verbose cache add name=undefined spec="passport-google-oauth@latest" args=["passport-google-oauth@latest",null]
+81 verbose parsed url { protocol: null,
+81 verbose parsed url   slashes: null,
+81 verbose parsed url   auth: null,
+81 verbose parsed url   host: null,
+81 verbose parsed url   port: null,
+81 verbose parsed url   hostname: null,
+81 verbose parsed url   hash: null,
+81 verbose parsed url   search: null,
+81 verbose parsed url   query: null,
+81 verbose parsed url   pathname: 'passport-google-oauth@latest',
+81 verbose parsed url   path: 'passport-google-oauth@latest',
+81 verbose parsed url   href: 'passport-google-oauth@latest' }
+82 verbose already installed skipping passport-local@~0.1.6 /home/sunny/amplayfierSaas
+83 verbose cache add [ 'passport-twitter@latest', null ]
+84 verbose cache add name=undefined spec="passport-twitter@latest" args=["passport-twitter@latest",null]
+85 verbose parsed url { protocol: null,
+85 verbose parsed url   slashes: null,
+85 verbose parsed url   auth: null,
+85 verbose parsed url   host: null,
+85 verbose parsed url   port: null,
+85 verbose parsed url   hostname: null,
+85 verbose parsed url   hash: null,
+85 verbose parsed url   search: null,
+85 verbose parsed url   query: null,
+85 verbose parsed url   pathname: 'passport-twitter@latest',
+85 verbose parsed url   path: 'passport-twitter@latest',
+85 verbose parsed url   href: 'passport-twitter@latest' }
+86 verbose already installed skipping serve-favicon@~2.0.1 /home/sunny/amplayfierSaas
+87 verbose already installed skipping socket.io@^1.0.6 /home/sunny/amplayfierSaas
+88 verbose already installed skipping socket.io-client@^1.0.6 /home/sunny/amplayfierSaas
+89 verbose already installed skipping socketio-jwt@^2.0.2 /home/sunny/amplayfierSaas
+90 verbose already installed skipping grunt@~0.4.4 /home/sunny/amplayfierSaas
+91 verbose already installed skipping grunt-autoprefixer@~0.7.2 /home/sunny/amplayfierSaas
+92 verbose already installed skipping grunt-wiredep@~1.8.0 /home/sunny/amplayfierSaas
+93 verbose already installed skipping grunt-concurrent@~0.5.0 /home/sunny/amplayfierSaas
+94 verbose already installed skipping grunt-contrib-clean@~0.5.0 /home/sunny/amplayfierSaas
+95 verbose already installed skipping grunt-contrib-concat@~0.4.0 /home/sunny/amplayfierSaas
+96 verbose already installed skipping grunt-contrib-copy@~0.5.0 /home/sunny/amplayfierSaas
+97 verbose already installed skipping grunt-contrib-cssmin@~0.9.0 /home/sunny/amplayfierSaas
+98 verbose already installed skipping grunt-contrib-htmlmin@~0.2.0 /home/sunny/amplayfierSaas
+99 verbose already installed skipping grunt-contrib-imagemin@~0.7.1 /home/sunny/amplayfierSaas
+100 verbose cache add name="passport-facebook" spec="latest" args=["passport-facebook","latest"]
+101 verbose parsed url { protocol: null,
+101 verbose parsed url   slashes: null,
+101 verbose parsed url   auth: null,
+101 verbose parsed url   host: null,
+101 verbose parsed url   port: null,
+101 verbose parsed url   hostname: null,
+101 verbose parsed url   hash: null,
+101 verbose parsed url   search: null,
+101 verbose parsed url   query: null,
+101 verbose parsed url   pathname: 'latest',
+101 verbose parsed url   path: 'latest',
+101 verbose parsed url   href: 'latest' }
+102 verbose addNamed [ 'passport-facebook', 'latest' ]
+103 verbose addNamed [ null, null ]
+104 silly lockFile 82ca5952-passport-facebook-latest passport-facebook@latest
+105 verbose lock passport-facebook@latest /home/sunny/.npm/82ca5952-passport-facebook-latest.lock
+106 verbose cache add name="passport-google-oauth" spec="latest" args=["passport-google-oauth","latest"]
+107 verbose parsed url { protocol: null,
+107 verbose parsed url   slashes: null,
+107 verbose parsed url   auth: null,
+107 verbose parsed url   host: null,
+107 verbose parsed url   port: null,
+107 verbose parsed url   hostname: null,
+107 verbose parsed url   hash: null,
+107 verbose parsed url   search: null,
+107 verbose parsed url   query: null,
+107 verbose parsed url   pathname: 'latest',
+107 verbose parsed url   path: 'latest',
+107 verbose parsed url   href: 'latest' }
+108 verbose addNamed [ 'passport-google-oauth', 'latest' ]
+109 verbose addNamed [ null, null ]
+110 silly lockFile 2c491da3-passport-google-oauth-latest passport-google-oauth@latest
+111 verbose lock passport-google-oauth@latest /home/sunny/.npm/2c491da3-passport-google-oauth-latest.lock
+112 verbose cache add name="passport-twitter" spec="latest" args=["passport-twitter","latest"]
+113 verbose parsed url { protocol: null,
+113 verbose parsed url   slashes: null,
+113 verbose parsed url   auth: null,
+113 verbose parsed url   host: null,
+113 verbose parsed url   port: null,
+113 verbose parsed url   hostname: null,
+113 verbose parsed url   hash: null,
+113 verbose parsed url   search: null,
+113 verbose parsed url   query: null,
+113 verbose parsed url   pathname: 'latest',
+113 verbose parsed url   path: 'latest',
+113 verbose parsed url   href: 'latest' }
+114 verbose addNamed [ 'passport-twitter', 'latest' ]
+115 verbose addNamed [ null, null ]
+116 silly lockFile d5de964c-passport-twitter-latest passport-twitter@latest
+117 verbose lock passport-twitter@latest /home/sunny/.npm/d5de964c-passport-twitter-latest.lock
+118 verbose already installed skipping grunt-contrib-jshint@~0.10.0 /home/sunny/amplayfierSaas
+119 verbose already installed skipping grunt-contrib-uglify@~0.4.0 /home/sunny/amplayfierSaas
+120 info addNameTag [ 'passport-facebook', 'latest' ]
+121 info addNameTag [ 'passport-google-oauth', 'latest' ]
+122 info addNameTag [ 'passport-twitter', 'latest' ]
+123 verbose request where is /passport-facebook
+124 verbose request registry https://registry.npmjs.org/
+125 verbose request id cc3a6a9326229c7f
+126 verbose url raw /passport-facebook
+127 verbose url resolving [ 'https://registry.npmjs.org/', './passport-facebook' ]
+128 verbose url resolved https://registry.npmjs.org/passport-facebook
+129 verbose request where is https://registry.npmjs.org/passport-facebook
+130 info trying registry request attempt 1 at 09:49:27
+131 verbose etag "D05OYO7G74MN7923KTOOLLCE0"
+132 http GET https://registry.npmjs.org/passport-facebook
+133 verbose request where is /passport-twitter
+134 verbose request registry https://registry.npmjs.org/
+135 verbose url raw /passport-twitter
+136 verbose url resolving [ 'https://registry.npmjs.org/', './passport-twitter' ]
+137 verbose url resolved https://registry.npmjs.org/passport-twitter
+138 verbose request where is https://registry.npmjs.org/passport-twitter
+139 info trying registry request attempt 1 at 09:49:27
+140 verbose etag "3035PXF90QJ55HHKQTK2VM80B"
+141 http GET https://registry.npmjs.org/passport-twitter
+142 verbose request where is /passport-google-oauth
+143 verbose request registry https://registry.npmjs.org/
+144 verbose url raw /passport-google-oauth
+145 verbose url resolving [ 'https://registry.npmjs.org/', './passport-google-oauth' ]
+146 verbose url resolved https://registry.npmjs.org/passport-google-oauth
+147 verbose request where is https://registry.npmjs.org/passport-google-oauth
+148 info trying registry request attempt 1 at 09:49:27
+149 verbose etag "6F3D69S3K4ZV51Q4YVA0RIOH5"
+150 http GET https://registry.npmjs.org/passport-google-oauth
+151 verbose git remote.origin.url https://github.com/DaftMonk/grunt-build-control
+152 http 304 https://registry.npmjs.org/passport-google-oauth
+153 silly registry.get cb [ 304,
+153 silly registry.get   { date: 'Tue, 14 Apr 2015 04:19:28 GMT',
+153 silly registry.get     server: 'Apache',
+153 silly registry.get     via: '1.1 varnish',
+153 silly registry.get     'last-modified': 'Tue, 14 Apr 2015 04:19:29 GMT',
+153 silly registry.get     'cache-control': 'max-age=60',
+153 silly registry.get     etag: '"6F3D69S3K4ZV51Q4YVA0RIOH5"',
+153 silly registry.get     age: '0',
+153 silly registry.get     'x-served-by': 'cache-fra1241-FRA',
+153 silly registry.get     'x-cache': 'HIT',
+153 silly registry.get     'x-cache-hits': '1',
+153 silly registry.get     'x-timer': 'S1428985168.357413,VS0,VE721',
+153 silly registry.get     vary: 'Accept',
+153 silly registry.get     'content-length': '0',
+153 silly registry.get     'keep-alive': 'timeout=10, max=50',
+153 silly registry.get     connection: 'Keep-Alive' } ]
+154 verbose etag https://registry.npmjs.org/passport-google-oauth from cache
+155 verbose addNamed [ 'passport-google-oauth', '0.2.0' ]
+156 verbose addNamed [ '0.2.0', '0.2.0' ]
+157 silly lockFile ef11d8df-passport-google-oauth-0-2-0 passport-google-oauth@0.2.0
+158 verbose lock passport-google-oauth@0.2.0 /home/sunny/.npm/ef11d8df-passport-google-oauth-0-2-0.lock
+159 silly lockFile ef11d8df-passport-google-oauth-0-2-0 passport-google-oauth@0.2.0
+160 silly lockFile ef11d8df-passport-google-oauth-0-2-0 passport-google-oauth@0.2.0
+161 silly lockFile 2c491da3-passport-google-oauth-latest passport-google-oauth@latest
+162 silly lockFile 2c491da3-passport-google-oauth-latest passport-google-oauth@latest
+163 info already installed passport-google-oauth@0.2.0
+164 error git fetch -a origin (https://github.com/DaftMonk/grunt-build-control) fatal: unable to access 'https://github.com/DaftMonk/grunt-build-control/': Could not resolve host: github.com
+165 silly lockFile 7e4d577b-com-DaftMonk-grunt-build-control https://github.com/DaftMonk/grunt-build-control
+166 silly lockFile 7e4d577b-com-DaftMonk-grunt-build-control https://github.com/DaftMonk/grunt-build-control
+167 http 304 https://registry.npmjs.org/passport-twitter
+168 silly registry.get cb [ 304,
+168 silly registry.get   { date: 'Tue, 14 Apr 2015 04:19:53 GMT',
+168 silly registry.get     server: 'Apache',
+168 silly registry.get     via: '1.1 varnish',
+168 silly registry.get     'last-modified': 'Tue, 14 Apr 2015 04:19:53 GMT',
+168 silly registry.get     'cache-control': 'max-age=60',
+168 silly registry.get     etag: '"3035PXF90QJ55HHKQTK2VM80B"',
+168 silly registry.get     age: '17',
+168 silly registry.get     'x-served-by': 'cache-fra1236-FRA',
+168 silly registry.get     'x-cache': 'HIT',
+168 silly registry.get     'x-cache-hits': '1',
+168 silly registry.get     'x-timer': 'S1428985193.275052,VS0,VE0',
+168 silly registry.get     vary: 'Accept',
+168 silly registry.get     'content-length': '0',
+168 silly registry.get     'keep-alive': 'timeout=10, max=50',
+168 silly registry.get     connection: 'Keep-Alive' } ]
+169 verbose etag https://registry.npmjs.org/passport-twitter from cache
+170 verbose addNamed [ 'passport-twitter', '1.0.3' ]
+171 verbose addNamed [ '1.0.3', '1.0.3' ]
+172 silly lockFile a65254eb-passport-twitter-1-0-3 passport-twitter@1.0.3
+173 verbose lock passport-twitter@1.0.3 /home/sunny/.npm/a65254eb-passport-twitter-1-0-3.lock
+174 silly lockFile a65254eb-passport-twitter-1-0-3 passport-twitter@1.0.3
+175 silly lockFile a65254eb-passport-twitter-1-0-3 passport-twitter@1.0.3
+176 silly lockFile d5de964c-passport-twitter-latest passport-twitter@latest
+177 silly lockFile d5de964c-passport-twitter-latest passport-twitter@latest
+178 info already installed passport-twitter@1.0.3
+179 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+180 info trying registry request attempt 2 at 09:50:07
+181 verbose etag "D05OYO7G74MN7923KTOOLLCE0"
+182 http GET https://registry.npmjs.org/passport-facebook
+183 http 304 https://registry.npmjs.org/passport-facebook
+184 silly registry.get cb [ 304,
+184 silly registry.get   { date: 'Tue, 14 Apr 2015 04:20:08 GMT',
+184 silly registry.get     server: 'Apache',
+184 silly registry.get     via: '1.1 varnish',
+184 silly registry.get     'last-modified': 'Tue, 14 Apr 2015 04:20:08 GMT',
+184 silly registry.get     'cache-control': 'max-age=60',
+184 silly registry.get     etag: '"D05OYO7G74MN7923KTOOLLCE0"',
+184 silly registry.get     age: '0',
+184 silly registry.get     'x-served-by': 'cache-lcy1134-LCY',
+184 silly registry.get     'x-cache': 'HIT',
+184 silly registry.get     'x-cache-hits': '1',
+184 silly registry.get     'x-timer': 'S1428985208.350639,VS0,VE87',
+184 silly registry.get     vary: 'Accept',
+184 silly registry.get     'content-length': '0',
+184 silly registry.get     'keep-alive': 'timeout=10, max=50',
+184 silly registry.get     connection: 'Keep-Alive' } ]
+185 verbose etag https://registry.npmjs.org/passport-facebook from cache
+186 verbose addNamed [ 'passport-facebook', '2.0.0' ]
+187 verbose addNamed [ '2.0.0', '2.0.0' ]
+188 silly lockFile 747c92ab-passport-facebook-2-0-0 passport-facebook@2.0.0
+189 verbose lock passport-facebook@2.0.0 /home/sunny/.npm/747c92ab-passport-facebook-2-0-0.lock
+190 silly lockFile 747c92ab-passport-facebook-2-0-0 passport-facebook@2.0.0
+191 silly lockFile 747c92ab-passport-facebook-2-0-0 passport-facebook@2.0.0
+192 silly lockFile 82ca5952-passport-facebook-latest passport-facebook@latest
+193 silly lockFile 82ca5952-passport-facebook-latest passport-facebook@latest
+194 info already installed passport-facebook@2.0.0
+195 error Error: Command failed: fatal: unable to access 'https://github.com/DaftMonk/grunt-build-control/': Could not resolve host: github.com
+195 error
+195 error     at ChildProcess.exithandler (child_process.js:658:15)
+195 error     at ChildProcess.emit (events.js:98:17)
+195 error     at maybeClose (child_process.js:766:16)
+195 error     at Socket.<anonymous> (child_process.js:979:11)
+195 error     at Socket.emit (events.js:95:17)
+195 error     at Pipe.close (net.js:466:12)
+196 error If you need help, you may report this *entire* log,
+196 error including the npm and node versions, at:
+196 error     <http://github.com/npm/npm/issues>
+197 error System Linux 3.16.0-33-generic
+198 error command "/usr/bin/node" "/usr/bin/npm" "install"
+199 error cwd /home/sunny/amplayfierSaas
+200 error node -v v0.10.37
+201 error npm -v 1.4.28
+202 error code 128
+203 verbose exit [ 1, true ]

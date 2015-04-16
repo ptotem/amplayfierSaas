@@ -305,7 +305,7 @@
                   {{portal.name}}
                   <div class="btn-bank pull-right">
                     <button type="button" class="btn btn-sky text-uppercase btn-sm">Play</button>
-                    <button ng-show="portal.role === 'Admin'" type="button" class="btn btn-sunny text-uppercase btn-sm">Edit</button>
+                    <button ng-show="portal.role === 'Admin'" type="button" ng-click="editPortal(portal)" class="btn btn-sunny text-uppercase btn-sm">Edit</button>
                     <button ng-show="portal.role === 'Admin'" type="button" class="btn btn-hot text-uppercase btn-sm" ng-click="deletePortal(portal)">Delete</button>
                   </div>
                 </li>

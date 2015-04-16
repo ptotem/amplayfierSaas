@@ -41,10 +41,32 @@ angular.module('amplayfierSaasApp')
         console.log($scope.storyConfig)
         $scope.initPage();
       });
-      $http.get('/api/decks/portal/showDeckByPortal/' + $stateParams.portalId).success(function(nodes) {
-        $scope.portalNodes = nodes;
-      });
+      getPortalNodes();
     });
+
+    var getPortalNodes = function() {
+      $http.get('/api/decks/portal/showDeckByPortal/' + $stateParams.portalId).success(function(nodes) {
+        // $scope.portalNodes = nodes;
+        $scope.portalNodes = [];
+        _.forEach($scope.storyConfig.nodes, function(val, i) {
+          var a = _.find(nodes, function(n) {
+            return n.nodeNo.toString() === i.toString();
+          });
+          if (a) {
+            $scope.portalNodes.push(a);
+          } else {
+            a = {}
+            a.nodeNo = i.toString();
+            a.decks = [];
+            $scope.portalNodes.push(a);
+          }
+        });
+        console.log(nodes);
+        console.log($scope.portalNodes);
+
+      });
+
+    }
 
     $scope.onFileSelect = function($files) {
       // alert();
@@ -237,9 +259,7 @@ angular.module('amplayfierSaasApp')
         $scope.selectedDeck = null;
         $scope.editDeck = false;
         console.log(data);
-        $http.get('/api/decks/portal/showDeckByPortal/' + $stateParams.portalId).success(function(nodes) {
-          $scope.portalNodes = nodes;
-        });
+        getPortalNodes();
       });
     }
 
@@ -296,9 +316,10 @@ angular.module('amplayfierSaasApp')
     //   return arr;
     // }
     $scope.moveToChapter = function(nodeNo, deck) {
-      alert(5);
+      // alert(5);
       $http.post('/api/decks/moveTo/node/' + nodeNo + '/' + deck._id + '/' + $scope.currentUser._id).success(function(deck) {
         console.log(deck);
+        getPortalNodes();
       });
     }
 

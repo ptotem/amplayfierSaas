@@ -99,4 +99,10 @@ angular.module('amplayfierSaasApp')
       $scope.selectedStoryBoard = storyboard;
       $('#modalStoryboard').modal('show');
     }
+
+    $scope.editPortal = function(portal) {
+      $('#modalMyPortal').modal('hide');
+      $location.path('/portal/' + portal._id);
+
+    }
   });
